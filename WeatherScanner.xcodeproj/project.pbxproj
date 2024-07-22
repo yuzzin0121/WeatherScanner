@@ -10,6 +10,7 @@
 		611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BB9922C4E89BF00FFC28A /* AppDelegate.swift */; };
 		611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BB9942C4E89BF00FFC28A /* SceneDelegate.swift */; };
 		611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BB99B2C4E89C200FFC28A /* Assets.xcassets */; };
+		611BB9D02C4EA85000FFC28A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 611BB9CF2C4EA85000FFC28A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		611BB9942C4E89BF00FFC28A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		611BB99B2C4E89C200FFC28A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		611BB9A02C4E89C200FFC28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		611BB9CF2C4EA85000FFC28A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +36,7 @@
 		611BB9862C4E89BF00FFC28A = {
 			isa = PBXGroup;
 			children = (
+				611BB9CF2C4EA85000FFC28A /* .gitignore */,
 				611BB9912C4E89BF00FFC28A /* WeatherScanner */,
 				611BB9902C4E89BF00FFC28A /* Products */,
 			);
@@ -316,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611BB9D02C4EA85000FFC28A /* .gitignore in Resources */,
 				611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

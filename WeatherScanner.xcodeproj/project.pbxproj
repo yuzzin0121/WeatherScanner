@@ -53,12 +53,7 @@
 		611BB9912C4E89BF00FFC28A /* WeatherScanner */ = {
 			isa = PBXGroup;
 			children = (
-				611BB9B62C4EA67F00FFC28A /* Application */,
-				611BB9BB2C4EA72500FFC28A /* Util */,
-				611BB9C42C4EA79C00FFC28A /* Base */,
-				611BB9C52C4EA7A400FFC28A /* Network */,
-				611BB9CC2C4EA7DB00FFC28A /* Model */,
-				611BB9B72C4EA6BD00FFC28A /* Scene */,
+				611BB9D12C4EA95B00FFC28A /* Sources */,
 				611BB9B82C4EA70200FFC28A /* Resources */,
 			);
 			path = WeatherScanner;
@@ -259,6 +254,19 @@
 			children = (
 			);
 			path = Encodable;
+			sourceTree = "<group>";
+		};
+		611BB9D12C4EA95B00FFC28A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				611BB9B62C4EA67F00FFC28A /* Application */,
+				611BB9BB2C4EA72500FFC28A /* Util */,
+				611BB9C42C4EA79C00FFC28A /* Base */,
+				611BB9C52C4EA7A400FFC28A /* Network */,
+				611BB9CC2C4EA7DB00FFC28A /* Model */,
+				611BB9B72C4EA6BD00FFC28A /* Scene */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

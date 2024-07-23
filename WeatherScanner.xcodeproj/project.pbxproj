@@ -29,6 +29,8 @@
 		611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5B2C4FDE1000FFC28A /* Lottie */; };
 		611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5E2C4FDECF00FFC28A /* Then */; };
 		611BBA632C4FE0AD00FFC28A /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA622C4FE0AD00FFC28A /* splashAnimation.json */; };
+		611BBA652C4FE4ED00FFC28A /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA642C4FE4ED00FFC28A /* CityManager.swift */; };
+		611BBA682C4FE53A00FFC28A /* reduced_citylist.json in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA672C4FE53A00FFC28A /* reduced_citylist.json */; };
 		611BBA6A2C4FE55900FFC28A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA692C4FE55900FFC28A /* City.swift */; };
 /* End PBXBuildFile section */
 

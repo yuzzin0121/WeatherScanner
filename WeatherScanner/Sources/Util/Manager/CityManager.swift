@@ -11,6 +11,16 @@ final class CityManager {
     static let shared = CityManager()
     var cityHashList: [String: City] = [:]
     
+    // 첫 날씨화면에 나올 도시 반환
+    func getDefaultCity() -> City? {
+        let defaultCityName = "Seongnam"
+        if !cityHashList.isEmpty && cityHashList[defaultCityName] != nil {
+            return cityHashList[defaultCityName]
+        }
+        return nil
+    }
+    
+    
     // 해시 테이블 형태로 저장 O(1)
     func saveToHashTable(completionHandler: ((Bool) -> Void)) {
         let cityList = getCityList()

@@ -42,6 +42,7 @@
 		611BBA842C4FEE5400FFC28A /* WeatherAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA832C4FEE5400FFC28A /* WeatherAPIError.swift */; };
 		611BBA862C4FEEB000FFC28A /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA852C4FEEB000FFC28A /* WeatherNetworkManager.swift */; };
 		611BBA882C4FEEE000FFC28A /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA872C4FEEE000FFC28A /* NetworkServiceProtocol.swift */; };
+		611BBA8A2C4FF3E600FFC28A /* FetchWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA892C4FF3E600FFC28A /* FetchWeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		611BBA832C4FEE5400FFC28A /* WeatherAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIError.swift; sourceTree = "<group>"; };
 		611BBA852C4FEEB000FFC28A /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
 		611BBA872C4FEEE000FFC28A /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		611BBA892C4FF3E600FFC28A /* FetchWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				611BBA692C4FE55900FFC28A /* City.swift */,
+				611BBA892C4FF3E600FFC28A /* FetchWeatherModel.swift */,
 			);
 			path = Decodable;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */,
 				611BBA862C4FEEB000FFC28A /* WeatherNetworkManager.swift in Sources */,
 				611BBA802C4FED4400FFC28A /* Language.swift in Sources */,
+				611BBA8A2C4FF3E600FFC28A /* FetchWeatherModel.swift in Sources */,
 				611BBA652C4FE4ED00FFC28A /* CityManager.swift in Sources */,
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
 				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,

@@ -56,6 +56,7 @@
 		611BBAAD2C5078BD00FFC28A /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAAC2C5078BD00FFC28A /* CurrentWeather.swift */; };
 		611BBAAF2C5078C700FFC28A /* HourlyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAAE2C5078C700FFC28A /* HourlyWeather.swift */; };
 		611BBAB12C5078D000FFC28A /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB02C5078D000FFC28A /* DailyWeather.swift */; };
+		611BBAB32C50797400FFC28A /* SectionOfWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		611BBAAC2C5078BD00FFC28A /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		611BBAAE2C5078C700FFC28A /* HourlyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeather.swift; sourceTree = "<group>"; };
 		611BBAB02C5078D000FFC28A /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
+		611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfWeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 				611BBA1D2C4FC5F800FFC28A /* Color.swift */,
 				611BBA7F2C4FED4400FFC28A /* Language.swift */,
 				611BBA812C4FED6B00FFC28A /* WeatherQueryName.swift */,
+				611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				611BBA882C4FEEE000FFC28A /* NetworkServiceProtocol.swift in Sources */,
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
+				611BBAB32C50797400FFC28A /* SectionOfWeatherData.swift in Sources */,
 				611BBA822C4FED6B00FFC28A /* WeatherQueryName.swift in Sources */,
 				611BBAA82C5077D900FFC28A /* LocationMapCollectionViewCell.swift in Sources */,
 				611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */,

@@ -50,6 +50,7 @@
 		611BBAA02C5076C100FFC28A /* HeaderTitleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA9F2C5076C100FFC28A /* HeaderTitleCollectionReusableView.swift */; };
 		611BBAA22C50771000FFC28A /* CurrentWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA12C50771000FFC28A /* CurrentWeatherCollectionViewCell.swift */; };
 		611BBAA42C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA32C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift */; };
+		611BBAA62C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		611BBA9F2C5076C100FFC28A /* HeaderTitleCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleCollectionReusableView.swift; sourceTree = "<group>"; };
 		611BBAA12C50771000FFC28A /* CurrentWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		611BBAA32C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +411,7 @@
 				611BBA992C5075E100FFC28A /* Background */,
 				611BBAA12C50771000FFC28A /* CurrentWeatherCollectionViewCell.swift */,
 				611BBAA32C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift */,
+				611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA9E2C5076AA00FFC28A /* CurrentWeatherHeaderCollectionReusableView.swift in Sources */,
 				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
+				611BBAA62C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift in Sources */,
 				611BBA962C5074E100FFC28A /* BaseCollectionReusableView.swift in Sources */,
 				611BBA882C4FEEE000FFC28A /* NetworkServiceProtocol.swift in Sources */,
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,

@@ -11,6 +11,24 @@
 		611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BB9942C4E89BF00FFC28A /* SceneDelegate.swift */; };
 		611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BB99B2C4E89C200FFC28A /* Assets.xcassets */; };
 		611BB9D02C4EA85000FFC28A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 611BB9CF2C4EA85000FFC28A /* .gitignore */; };
+		611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA102C4FC3F300FFC28A /* BaseView.swift */; };
+		611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA122C4FC40900FFC28A /* ViewProtocol.swift */; };
+		611BBA152C4FC47500FFC28A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA142C4FC47500FFC28A /* BaseViewController.swift */; };
+		611BBA182C4FC4AC00FFC28A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA172C4FC4AC00FFC28A /* RxCocoa */; };
+		611BBA1A2C4FC4AC00FFC28A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA192C4FC4AC00FFC28A /* RxSwift */; };
+		611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA1B2C4FC5C200FFC28A /* ViewModelType.swift */; };
+		611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA1D2C4FC5F800FFC28A /* Color.swift */; };
+		611BBA202C4FC60A00FFC28A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA1F2C4FC60A00FFC28A /* Colors.xcassets */; };
+		611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA212C4FC63800FFC28A /* WeatherView.swift */; };
+		611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA232C4FC64200FFC28A /* WeatherViewController.swift */; };
+		611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */; };
+		611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA272C4FC76F00FFC28A /* SeachView.swift */; };
+		611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA292C4FC77E00FFC28A /* SearchViewController.swift */; };
+		611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */; };
+		611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA542C4FDDC600FFC28A /* SplashViewController.swift */; };
+		611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5B2C4FDE1000FFC28A /* Lottie */; };
+		611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5E2C4FDECF00FFC28A /* Then */; };
+		611BBA632C4FE0AD00FFC28A /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA622C4FE0AD00FFC28A /* splashAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +36,22 @@
 		611BB9922C4E89BF00FFC28A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		611BB9942C4E89BF00FFC28A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		611BB99B2C4E89C200FFC28A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		611BB9A02C4E89C200FFC28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		611BB9A02C4E89C200FFC28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		611BB9CF2C4EA85000FFC28A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		611BBA102C4FC3F300FFC28A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		611BBA122C4FC40900FFC28A /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		611BBA142C4FC47500FFC28A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		611BBA1B2C4FC5C200FFC28A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		611BBA1D2C4FC5F800FFC28A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		611BBA1F2C4FC60A00FFC28A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		611BBA212C4FC63800FFC28A /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		611BBA232C4FC64200FFC28A /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		611BBA272C4FC76F00FFC28A /* SeachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
+		611BBA292C4FC77E00FFC28A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		611BBA542C4FDDC600FFC28A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		611BBA622C4FE0AD00FFC28A /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611BBA1A2C4FC4AC00FFC28A /* RxSwift in Frameworks */,
+				611BBA182C4FC4AC00FFC28A /* RxCocoa in Frameworks */,
+				611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */,
+				611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +89,7 @@
 		611BB9912C4E89BF00FFC28A /* WeatherScanner */ = {
 			isa = PBXGroup;
 			children = (
+				611BB9A02C4E89C200FFC28A /* Info.plist */,
 				611BB9D12C4EA95B00FFC28A /* Sources */,
 				611BB9B82C4EA70200FFC28A /* Resources */,
 			);
@@ -71,6 +108,7 @@
 		611BB9B72C4EA6BD00FFC28A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA522C4FDDB200FFC28A /* Splash */,
 				611BB9B92C4EA71400FFC28A /* Weather */,
 				611BB9BA2C4EA71B00FFC28A /* Search */,
 			);
@@ -81,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				611BB99B2C4E89C200FFC28A /* Assets.xcassets */,
-				611BB9A02C4E89C200FFC28A /* Info.plist */,
+				611BBA1F2C4FC60A00FFC28A /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -118,6 +156,7 @@
 		611BB9BC2C4EA75200FFC28A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -125,6 +164,8 @@
 		611BB9BD2C4EA75600FFC28A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA272C4FC76F00FFC28A /* SeachView.swift */,
+				611BBA292C4FC77E00FFC28A /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +173,7 @@
 		611BB9BE2C4EA75A00FFC28A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -139,6 +181,8 @@
 		611BB9BF2C4EA75E00FFC28A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA212C4FC63800FFC28A /* WeatherView.swift */,
+				611BBA232C4FC64200FFC28A /* WeatherViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +190,8 @@
 		611BB9C02C4EA77200FFC28A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA122C4FC40900FFC28A /* ViewProtocol.swift */,
+				611BBA1B2C4FC5C200FFC28A /* ViewModelType.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -167,6 +213,7 @@
 		611BB9C32C4EA78400FFC28A /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA1D2C4FC5F800FFC28A /* Color.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -174,6 +221,8 @@
 		611BB9C42C4EA79C00FFC28A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA102C4FC3F300FFC28A /* BaseView.swift */,
+				611BBA142C4FC47500FFC28A /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -269,6 +318,23 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		611BBA522C4FDDB200FFC28A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				611BBA532C4FDDB900FFC28A /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		611BBA532C4FDDB900FFC28A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				611BBA622C4FE0AD00FFC28A /* splashAnimation.json */,
+				611BBA542C4FDDC600FFC28A /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +351,12 @@
 			dependencies = (
 			);
 			name = WeatherScanner;
+			packageProductDependencies = (
+				611BBA172C4FC4AC00FFC28A /* RxCocoa */,
+				611BBA192C4FC4AC00FFC28A /* RxSwift */,
+				611BBA5B2C4FDE1000FFC28A /* Lottie */,
+				611BBA5E2C4FDECF00FFC28A /* Then */,
+			);
 			productName = WeatherScanner;
 			productReference = 611BB98F2C4E89BF00FFC28A /* WeatherScanner.app */;
 			productType = "com.apple.product-type.application";
@@ -313,6 +385,11 @@
 				Base,
 			);
 			mainGroup = 611BB9862C4E89BF00FFC28A;
+			packageReferences = (
+				611BBA162C4FC4AC00FFC28A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 611BB9902C4E89BF00FFC28A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -327,6 +404,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611BBA202C4FC60A00FFC28A /* Colors.xcassets in Resources */,
+				611BBA632C4FE0AD00FFC28A /* splashAnimation.json in Resources */,
 				611BB9D02C4EA85000FFC28A /* .gitignore in Resources */,
 				611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */,
 			);
@@ -339,8 +418,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611BBA152C4FC47500FFC28A /* BaseViewController.swift in Sources */,
+				611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */,
+				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
+				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
+				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
+				611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */,
+				611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */,
+				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
+				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
+				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
+				611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */,
 				611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */,
+				611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +643,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		611BBA162C4FC4AC00FFC28A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+		611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		611BBA172C4FC4AC00FFC28A /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBA162C4FC4AC00FFC28A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		611BBA192C4FC4AC00FFC28A /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBA162C4FC4AC00FFC28A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		611BBA5B2C4FDE1000FFC28A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		611BBA5E2C4FDECF00FFC28A /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 611BB9872C4E89BF00FFC28A /* Project object */;
 }

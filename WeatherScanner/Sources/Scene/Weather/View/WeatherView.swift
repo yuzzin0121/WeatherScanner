@@ -33,6 +33,12 @@ final class WeatherView: BaseView {
         weatherCollectionView.register(HeaderTitleCollectionReusableView.self,
                                        forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                        withReuseIdentifier: HeaderTitleCollectionReusableView.identifier)           // 그 외 셀의 헤더 - 아이콘, 타이틀
+        
+        weatherCollectionView.register(CurrentWeatherCollectionViewCell.self, forCellWithReuseIdentifier: CurrentWeatherCollectionViewCell.identifier)
+        weatherCollectionView.register(HourlyWeatherCollectionViewCell.self, forCellWithReuseIdentifier: HourlyWeatherCollectionViewCell.identifier)
+        weatherCollectionView.register(DailyWeatherCollectionViewCell.self, forCellWithReuseIdentifier: DailyWeatherCollectionViewCell.identifier)
+        weatherCollectionView.register(LocationMapCollectionViewCell.self, forCellWithReuseIdentifier: LocationMapCollectionViewCell.identifier)
+        weatherCollectionView.register(WeatherInfoCollectionViewCell.self, forCellWithReuseIdentifier: WeatherInfoCollectionViewCell.identifier)
     }
 }
 

@@ -12,11 +12,14 @@ final class WeatherView: BaseView {
 
     
     override func configureHierarchy() {
-        
+        addSubview(weatherCollectionView)
     }
     
     override func configureLayout() {
-        
+        weatherCollectionView.snp.makeConstraints { make in
+            make.verticalEdges.equalTo(safeAreaLayoutGuide)
+            make.horizontalEdges.equalToSuperview()
+        }
     }
     
     override func configureView() {

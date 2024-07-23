@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import RxSwift
 
 final class WeatherViewController: BaseViewController {
-    let mainView = WeatherView()
+    private let mainView = WeatherView()
+    
+    private let viewModel: WeatherViewModel
+    
+    init(viewModel: WeatherViewModel) {
+        self.viewModel = viewModel
+        super.init()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +24,9 @@ final class WeatherViewController: BaseViewController {
     }
     
     override func bind() {
+        let input = WeatherViewModel.Input(viewDidLoadTrigger: Observable.just(()))
+        let output = viewModel.transform(input: input)
+        
         
     }
 

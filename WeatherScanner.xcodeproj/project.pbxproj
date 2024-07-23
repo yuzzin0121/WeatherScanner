@@ -22,6 +22,8 @@
 		611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA212C4FC63800FFC28A /* WeatherView.swift */; };
 		611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA232C4FC64200FFC28A /* WeatherViewController.swift */; };
 		611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */; };
+		611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA272C4FC76F00FFC28A /* SeachView.swift */; };
+		611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA292C4FC77E00FFC28A /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		611BBA212C4FC63800FFC28A /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		611BBA232C4FC64200FFC28A /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		611BBA272C4FC76F00FFC28A /* SeachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
+		611BBA292C4FC77E00FFC28A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		611BB9BD2C4EA75600FFC28A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA272C4FC76F00FFC28A /* SeachView.swift */,
+				611BBA292C4FC77E00FFC28A /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,8 +387,10 @@
 				611BBA152C4FC47500FFC28A /* BaseViewController.swift in Sources */,
 				611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */,
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
+				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
+				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
 				611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */,

@@ -29,6 +29,9 @@
 		611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5B2C4FDE1000FFC28A /* Lottie */; };
 		611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5E2C4FDECF00FFC28A /* Then */; };
 		611BBA632C4FE0AD00FFC28A /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA622C4FE0AD00FFC28A /* splashAnimation.json */; };
+		611BBA652C4FE4ED00FFC28A /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA642C4FE4ED00FFC28A /* CityManager.swift */; };
+		611BBA682C4FE53A00FFC28A /* reduced_citylist.json in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA672C4FE53A00FFC28A /* reduced_citylist.json */; };
+		611BBA6A2C4FE55900FFC28A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA692C4FE55900FFC28A /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		611BBA542C4FDDC600FFC28A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		611BBA622C4FE0AD00FFC28A /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
+		611BBA642C4FE4ED00FFC28A /* CityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
+		611BBA672C4FE53A00FFC28A /* reduced_citylist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reduced_citylist.json; sourceTree = "<group>"; };
+		611BBA692C4FE55900FFC28A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 		611BB9C22C4EA77D00FFC28A /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA642C4FE4ED00FFC28A /* CityManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -294,6 +301,7 @@
 		611BB9CD2C4EA7E900FFC28A /* Decodable */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA692C4FE55900FFC28A /* City.swift */,
 			);
 			path = Decodable;
 			sourceTree = "<group>";
@@ -313,6 +321,7 @@
 				611BB9C42C4EA79C00FFC28A /* Base */,
 				611BB9C52C4EA7A400FFC28A /* Network */,
 				611BB9CC2C4EA7DB00FFC28A /* Model */,
+				611BBA662C4FE52E00FFC28A /* Data */,
 				611BB9B72C4EA6BD00FFC28A /* Scene */,
 			);
 			path = Sources;
@@ -333,6 +342,15 @@
 				611BBA542C4FDDC600FFC28A /* SplashViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		611BBA662C4FE52E00FFC28A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				611BBA672C4FE53A00FFC28A /* reduced_citylist.json */,
+			);
+			name = Data;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				611BBA202C4FC60A00FFC28A /* Colors.xcassets in Resources */,
+				611BBA682C4FE53A00FFC28A /* reduced_citylist.json in Resources */,
 				611BBA632C4FE0AD00FFC28A /* splashAnimation.json in Resources */,
 				611BB9D02C4EA85000FFC28A /* .gitignore in Resources */,
 				611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */,
@@ -420,6 +439,7 @@
 			files = (
 				611BBA152C4FC47500FFC28A /* BaseViewController.swift in Sources */,
 				611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */,
+				611BBA652C4FE4ED00FFC28A /* CityManager.swift in Sources */,
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
 				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
@@ -431,6 +451,7 @@
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
 				611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */,
 				611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */,
+				611BBA6A2C4FE55900FFC28A /* City.swift in Sources */,
 				611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

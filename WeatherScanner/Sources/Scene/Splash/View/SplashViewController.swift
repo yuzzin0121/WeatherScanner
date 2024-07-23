@@ -14,6 +14,7 @@ final class SplashViewController: UIViewController {
         $0.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
         $0.contentMode = .scaleAspectFit
     }
+    private let dispatchGroup = DispatchGroup()
     
     override func viewDidLoad() {
         configureHierarchy()
@@ -23,7 +24,26 @@ final class SplashViewController: UIViewController {
     }
     
     private func playSplashAnimation() {
+        // 애니메이션 재생
+        dispatchGroup.enter()
         animationView.play { [weak self] completed in
+            guard let self else { return }
+            dispatchGroup.leave()
+        }
+        
+        dispatchGroup.enter()
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self else { return }
+            CityManager.shared.saveToHashTable { isSuccess in
+                if isSuccess {
+                    self.dispatchGroup.leave()
+                } else {
+                    // TODO: 에러 처리
+                }
+            }
+        }
+        
+        dispatchGroup.notify(queue: .main) { [weak self] in
             guard let self else { return }
             showWeatherVC()
         }

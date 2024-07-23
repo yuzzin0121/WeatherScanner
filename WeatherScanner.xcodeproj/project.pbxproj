@@ -52,6 +52,7 @@
 		611BBAA42C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA32C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift */; };
 		611BBAA62C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */; };
 		611BBAA82C5077D900FFC28A /* LocationMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA72C5077D900FFC28A /* LocationMapCollectionViewCell.swift */; };
+		611BBAAA2C50780900FFC28A /* WeatherInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA92C50780900FFC28A /* WeatherInfoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		611BBAA32C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		611BBAA72C5077D900FFC28A /* LocationMapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapCollectionViewCell.swift; sourceTree = "<group>"; };
+		611BBAA92C50780900FFC28A /* WeatherInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +417,7 @@
 				611BBAA32C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift */,
 				611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */,
 				611BBAA72C5077D900FFC28A /* LocationMapCollectionViewCell.swift */,
+				611BBAA92C50780900FFC28A /* WeatherInfoCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */,
 				611BBA942C5074D100FFC28A /* BaseCollectionViewCell.swift in Sources */,
 				611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */,
+				611BBAAA2C50780900FFC28A /* WeatherInfoCollectionViewCell.swift in Sources */,
 				611BBA842C4FEE5400FFC28A /* WeatherAPIError.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA9E2C5076AA00FFC28A /* CurrentWeatherHeaderCollectionReusableView.swift in Sources */,

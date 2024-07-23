@@ -39,6 +39,7 @@
 		611BBA7E2C4FED2A00FFC28A /* FetchWeatherQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA7D2C4FED2A00FFC28A /* FetchWeatherQuery.swift */; };
 		611BBA802C4FED4400FFC28A /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA7F2C4FED4400FFC28A /* Language.swift */; };
 		611BBA822C4FED6B00FFC28A /* WeatherQueryName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA812C4FED6B00FFC28A /* WeatherQueryName.swift */; };
+		611BBA842C4FEE5400FFC28A /* WeatherAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA832C4FEE5400FFC28A /* WeatherAPIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		611BBA7D2C4FED2A00FFC28A /* FetchWeatherQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWeatherQuery.swift; sourceTree = "<group>"; };
 		611BBA7F2C4FED4400FFC28A /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		611BBA812C4FED6B00FFC28A /* WeatherQueryName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherQueryName.swift; sourceTree = "<group>"; };
+		611BBA832C4FEE5400FFC28A /* WeatherAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 		611BB9C92C4EA7CB00FFC28A /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA832C4FEE5400FFC28A /* WeatherAPIError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
 				611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */,
 				611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */,
+				611BBA842C4FEE5400FFC28A /* WeatherAPIError.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,

@@ -57,6 +57,7 @@
 		611BBAAF2C5078C700FFC28A /* HourlyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAAE2C5078C700FFC28A /* HourlyWeather.swift */; };
 		611BBAB12C5078D000FFC28A /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB02C5078D000FFC28A /* DailyWeather.swift */; };
 		611BBAB32C50797400FFC28A /* SectionOfWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */; };
+		611BBAB52C5079D900FFC28A /* WeatherSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB42C5079D900FFC28A /* WeatherSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		611BBAAE2C5078C700FFC28A /* HourlyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeather.swift; sourceTree = "<group>"; };
 		611BBAB02C5078D000FFC28A /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
 		611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfWeatherData.swift; sourceTree = "<group>"; };
+		611BBAB42C5079D900FFC28A /* WeatherSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 				611BBA7F2C4FED4400FFC28A /* Language.swift */,
 				611BBA812C4FED6B00FFC28A /* WeatherQueryName.swift */,
 				611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */,
+				611BBAB42C5079D900FFC28A /* WeatherSection.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA9E2C5076AA00FFC28A /* CurrentWeatherHeaderCollectionReusableView.swift in Sources */,
 				611BBAB12C5078D000FFC28A /* DailyWeather.swift in Sources */,
+				611BBAB52C5079D900FFC28A /* WeatherSection.swift in Sources */,
 				611BBAAF2C5078C700FFC28A /* HourlyWeather.swift in Sources */,
 				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
 				611BBAA62C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift in Sources */,

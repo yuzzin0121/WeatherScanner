@@ -24,6 +24,7 @@
 		611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */; };
 		611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA272C4FC76F00FFC28A /* SeachView.swift */; };
 		611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA292C4FC77E00FFC28A /* SearchViewController.swift */; };
+		611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		611BBA272C4FC76F00FFC28A /* SeachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
 		611BBA292C4FC77E00FFC28A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		611BB9BC2C4EA75200FFC28A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
 				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
+				611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,

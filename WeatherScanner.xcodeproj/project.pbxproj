@@ -17,6 +17,8 @@
 		611BBA182C4FC4AC00FFC28A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA172C4FC4AC00FFC28A /* RxCocoa */; };
 		611BBA1A2C4FC4AC00FFC28A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA192C4FC4AC00FFC28A /* RxSwift */; };
 		611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA1B2C4FC5C200FFC28A /* ViewModelType.swift */; };
+		611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA1D2C4FC5F800FFC28A /* Color.swift */; };
+		611BBA202C4FC60A00FFC28A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA1F2C4FC60A00FFC28A /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		611BBA122C4FC40900FFC28A /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		611BBA142C4FC47500FFC28A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		611BBA1B2C4FC5C200FFC28A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		611BBA1D2C4FC5F800FFC28A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		611BBA1F2C4FC60A00FFC28A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				611BB99B2C4E89C200FFC28A /* Assets.xcassets */,
+				611BBA1F2C4FC60A00FFC28A /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 		611BB9C32C4EA78400FFC28A /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA1D2C4FC5F800FFC28A /* Color.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611BBA202C4FC60A00FFC28A /* Colors.xcassets in Resources */,
 				611BB9D02C4EA85000FFC28A /* .gitignore in Resources */,
 				611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */,
 			);
@@ -364,6 +371,7 @@
 			files = (
 				611BBA152C4FC47500FFC28A /* BaseViewController.swift in Sources */,
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
+				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
 				611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */,

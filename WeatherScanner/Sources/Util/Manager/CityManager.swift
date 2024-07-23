@@ -9,6 +9,25 @@ import Foundation
 
 final class CityManager {
     static let shared = CityManager()
+    var cityHashList: [String: City] = [:]
+    
+    // 해시 테이블 형태로 저장 O(1)
+    func saveToHashTable() {
+        let cityList = getCityList()
+        if !cityList.isEmpty {
+            var cityHashList = [String: City]()
+            
+            for city in cityList {
+                cityHashList[city.name] = city
+            }
+            
+            self.cityHashList = cityHashList
+        } else {
+            print("error")
+            // TODO: 에러처리
+        }
+        
+    }
     
     // 구조체 배열로 변환
     func getCityList() -> [City] {

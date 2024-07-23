@@ -32,6 +32,8 @@
 		611BBA652C4FE4ED00FFC28A /* CityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA642C4FE4ED00FFC28A /* CityManager.swift */; };
 		611BBA682C4FE53A00FFC28A /* reduced_citylist.json in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA672C4FE53A00FFC28A /* reduced_citylist.json */; };
 		611BBA6A2C4FE55900FFC28A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA692C4FE55900FFC28A /* City.swift */; };
+		611BBA752C4FECB000FFC28A /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA742C4FECB000FFC28A /* TargetType.swift */; };
+		611BBA782C4FECBF00FFC28A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA772C4FECBF00FFC28A /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,7 @@
 		611BBA642C4FE4ED00FFC28A /* CityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManager.swift; sourceTree = "<group>"; };
 		611BBA672C4FE53A00FFC28A /* reduced_citylist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reduced_citylist.json; sourceTree = "<group>"; };
 		611BBA692C4FE55900FFC28A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		611BBA742C4FECB000FFC28A /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611BBA782C4FECBF00FFC28A /* Alamofire in Frameworks */,
 				611BBA1A2C4FC4AC00FFC28A /* RxSwift in Frameworks */,
 				611BBA182C4FC4AC00FFC28A /* RxCocoa in Frameworks */,
 				611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */,
@@ -257,6 +261,7 @@
 		611BB9C72C4EA7BE00FFC28A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA742C4FECB000FFC28A /* TargetType.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				611BBA192C4FC4AC00FFC28A /* RxSwift */,
 				611BBA5B2C4FDE1000FFC28A /* Lottie */,
 				611BBA5E2C4FDECF00FFC28A /* Then */,
+				611BBA772C4FECBF00FFC28A /* Alamofire */,
 			);
 			productName = WeatherScanner;
 			productReference = 611BB98F2C4E89BF00FFC28A /* WeatherScanner.app */;
@@ -407,6 +413,7 @@
 				611BBA162C4FC4AC00FFC28A /* XCRemoteSwiftPackageReference "RxSwift" */,
 				611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */,
+				611BBA762C4FECBF00FFC28A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 611BB9902C4E89BF00FFC28A /* Products */;
 			projectDirPath = "";
@@ -453,6 +460,7 @@
 				611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */,
 				611BBA6A2C4FE55900FFC28A /* City.swift in Sources */,
 				611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */,
+				611BBA752C4FECB000FFC28A /* TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +698,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		611BBA762C4FECBF00FFC28A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -712,6 +728,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		611BBA772C4FECBF00FFC28A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBA762C4FECBF00FFC28A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -9,4 +9,5 @@ import UIKit
 
 enum Color {
     static let white: UIColor = .customWhite
+    static let backgroundBlue: UIColor = .backgroundBlue
 }

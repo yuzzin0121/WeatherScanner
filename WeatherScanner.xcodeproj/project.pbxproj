@@ -25,6 +25,10 @@
 		611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA272C4FC76F00FFC28A /* SeachView.swift */; };
 		611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA292C4FC77E00FFC28A /* SearchViewController.swift */; };
 		611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */; };
+		611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA542C4FDDC600FFC28A /* SplashViewController.swift */; };
+		611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5B2C4FDE1000FFC28A /* Lottie */; };
+		611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBA5E2C4FDECF00FFC28A /* Then */; };
+		611BBA632C4FE0AD00FFC28A /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA622C4FE0AD00FFC28A /* splashAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,8 @@
 		611BBA272C4FC76F00FFC28A /* SeachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
 		611BBA292C4FC77E00FFC28A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		611BBA2B2C4FC7CF00FFC28A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		611BBA542C4FDDC600FFC28A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		611BBA622C4FE0AD00FFC28A /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,8 @@
 			files = (
 				611BBA1A2C4FC4AC00FFC28A /* RxSwift in Frameworks */,
 				611BBA182C4FC4AC00FFC28A /* RxCocoa in Frameworks */,
+				611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */,
+				611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +108,7 @@
 		611BB9B72C4EA6BD00FFC28A /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA522C4FDDB200FFC28A /* Splash */,
 				611BB9B92C4EA71400FFC28A /* Weather */,
 				611BB9BA2C4EA71B00FFC28A /* Search */,
 			);
@@ -309,6 +318,23 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		611BBA522C4FDDB200FFC28A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				611BBA532C4FDDB900FFC28A /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		611BBA532C4FDDB900FFC28A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				611BBA622C4FE0AD00FFC28A /* splashAnimation.json */,
+				611BBA542C4FDDC600FFC28A /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +354,8 @@
 			packageProductDependencies = (
 				611BBA172C4FC4AC00FFC28A /* RxCocoa */,
 				611BBA192C4FC4AC00FFC28A /* RxSwift */,
+				611BBA5B2C4FDE1000FFC28A /* Lottie */,
+				611BBA5E2C4FDECF00FFC28A /* Then */,
 			);
 			productName = WeatherScanner;
 			productReference = 611BB98F2C4E89BF00FFC28A /* WeatherScanner.app */;
@@ -359,6 +387,8 @@
 			mainGroup = 611BB9862C4E89BF00FFC28A;
 			packageReferences = (
 				611BBA162C4FC4AC00FFC28A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 611BB9902C4E89BF00FFC28A /* Products */;
 			projectDirPath = "";
@@ -375,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				611BBA202C4FC60A00FFC28A /* Colors.xcassets in Resources */,
+				611BBA632C4FE0AD00FFC28A /* splashAnimation.json in Resources */,
 				611BB9D02C4EA85000FFC28A /* .gitignore in Resources */,
 				611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */,
 			);
@@ -392,6 +423,7 @@
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
 				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
+				611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */,
 				611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
@@ -621,6 +653,22 @@
 				minimumVersion = 6.7.1;
 			};
 		};
+		611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+		611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -633,6 +681,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 611BBA162C4FC4AC00FFC28A /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		611BBA5B2C4FDE1000FFC28A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		611BBA5E2C4FDECF00FFC28A /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

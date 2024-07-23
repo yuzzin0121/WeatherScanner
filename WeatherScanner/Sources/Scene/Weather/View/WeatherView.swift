@@ -19,7 +19,7 @@ final class WeatherView: BaseView {
     }
     
     override func configureView() {
-        
+        super.configureView()
     }
 }
 

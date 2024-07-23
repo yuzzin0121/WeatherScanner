@@ -26,6 +26,13 @@ final class WeatherView: BaseView {
         weatherCollectionView.backgroundColor = .clear
         weatherCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         weatherCollectionView.showsVerticalScrollIndicator = false
+        
+        weatherCollectionView.register(CurrentWeatherHeaderCollectionReusableView.self,
+                                       forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                       withReuseIdentifier: CurrentWeatherHeaderCollectionReusableView.identifier)  // 현재 날씨 셀의 헤더 - 지역 이름
+        weatherCollectionView.register(HeaderTitleCollectionReusableView.self,
+                                       forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                       withReuseIdentifier: HeaderTitleCollectionReusableView.identifier)           // 그 외 셀의 헤더 - 아이콘, 타이틀
     }
 }
 
@@ -56,7 +63,7 @@ extension WeatherView {
                 return nil
             }
         }
-        layout.register(CellBackgroundView.self, forDecorationViewOfKind: CellBackgroundView.identifier)
+        layout.register(CellBackgroundReusableView.self, forDecorationViewOfKind: CellBackgroundReusableView.identifier)
         return layout
     }
     

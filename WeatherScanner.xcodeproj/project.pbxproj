@@ -11,6 +11,7 @@
 		611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BB9942C4E89BF00FFC28A /* SceneDelegate.swift */; };
 		611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BB99B2C4E89C200FFC28A /* Assets.xcassets */; };
 		611BB9D02C4EA85000FFC28A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 611BB9CF2C4EA85000FFC28A /* .gitignore */; };
+		611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA102C4FC3F300FFC28A /* BaseView.swift */; };
 		611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA122C4FC40900FFC28A /* ViewProtocol.swift */; };
 /* End PBXBuildFile section */
 

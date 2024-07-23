@@ -53,6 +53,9 @@
 		611BBAA62C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */; };
 		611BBAA82C5077D900FFC28A /* LocationMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA72C5077D900FFC28A /* LocationMapCollectionViewCell.swift */; };
 		611BBAAA2C50780900FFC28A /* WeatherInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAA92C50780900FFC28A /* WeatherInfoCollectionViewCell.swift */; };
+		611BBAAD2C5078BD00FFC28A /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAAC2C5078BD00FFC28A /* CurrentWeather.swift */; };
+		611BBAAF2C5078C700FFC28A /* HourlyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAAE2C5078C700FFC28A /* HourlyWeather.swift */; };
+		611BBAB12C5078D000FFC28A /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB02C5078D000FFC28A /* DailyWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +102,9 @@
 		611BBAA52C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		611BBAA72C5077D900FFC28A /* LocationMapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapCollectionViewCell.swift; sourceTree = "<group>"; };
 		611BBAA92C50780900FFC28A /* WeatherInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		611BBAAC2C5078BD00FFC28A /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		611BBAAE2C5078C700FFC28A /* HourlyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeather.swift; sourceTree = "<group>"; };
+		611BBAB02C5078D000FFC28A /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +352,7 @@
 		611BB9CC2C4EA7DB00FFC28A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				611BBAAB2C5078B000FFC28A /* Other */,
 				611BB9CE2C4EA7EE00FFC28A /* Encodable */,
 				611BB9CD2C4EA7E900FFC28A /* Decodable */,
 			);
@@ -437,6 +444,16 @@
 				611BBA9F2C5076C100FFC28A /* HeaderTitleCollectionReusableView.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		611BBAAB2C5078B000FFC28A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				611BBAAC2C5078BD00FFC28A /* CurrentWeather.swift */,
+				611BBAAE2C5078C700FFC28A /* HourlyWeather.swift */,
+				611BBAB02C5078D000FFC28A /* DailyWeather.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,6 +559,8 @@
 				611BBA842C4FEE5400FFC28A /* WeatherAPIError.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA9E2C5076AA00FFC28A /* CurrentWeatherHeaderCollectionReusableView.swift in Sources */,
+				611BBAB12C5078D000FFC28A /* DailyWeather.swift in Sources */,
+				611BBAAF2C5078C700FFC28A /* HourlyWeather.swift in Sources */,
 				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
 				611BBAA62C5077A400FFC28A /* DailyWeatherCollectionViewCell.swift in Sources */,
 				611BBA962C5074E100FFC28A /* BaseCollectionReusableView.swift in Sources */,
@@ -561,6 +580,7 @@
 				611BBAA42C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift in Sources */,
 				611BBA752C4FECB000FFC28A /* TargetType.swift in Sources */,
 				611BBA9B2C5075E900FFC28A /* CellBackgroundReusableView.swift in Sources */,
+				611BBAAD2C5078BD00FFC28A /* CurrentWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,6 +43,8 @@
 		611BBA862C4FEEB000FFC28A /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA852C4FEEB000FFC28A /* WeatherNetworkManager.swift */; };
 		611BBA882C4FEEE000FFC28A /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA872C4FEEE000FFC28A /* NetworkServiceProtocol.swift */; };
 		611BBA8A2C4FF3E600FFC28A /* FetchWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA892C4FF3E600FFC28A /* FetchWeatherModel.swift */; };
+		611BBA942C5074D100FFC28A /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA932C5074D100FFC28A /* BaseCollectionViewCell.swift */; };
+		611BBA962C5074E100FFC28A /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA952C5074E100FFC28A /* BaseCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		611BBA852C4FEEB000FFC28A /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
 		611BBA872C4FEEE000FFC28A /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		611BBA892C4FF3E600FFC28A /* FetchWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWeatherModel.swift; sourceTree = "<group>"; };
+		611BBA932C5074D100FFC28A /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		611BBA952C5074E100FFC28A /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,8 @@
 			children = (
 				611BBA102C4FC3F300FFC28A /* BaseView.swift */,
 				611BBA142C4FC47500FFC28A /* BaseViewController.swift */,
+				611BBA932C5074D100FFC28A /* BaseCollectionViewCell.swift */,
+				611BBA952C5074E100FFC28A /* BaseCollectionReusableView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -482,10 +488,12 @@
 				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
 				611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */,
+				611BBA942C5074D100FFC28A /* BaseCollectionViewCell.swift in Sources */,
 				611BBA2C2C4FC7CF00FFC28A /* SearchViewModel.swift in Sources */,
 				611BBA842C4FEE5400FFC28A /* WeatherAPIError.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
 				611BBA2A2C4FC77E00FFC28A /* SearchViewController.swift in Sources */,
+				611BBA962C5074E100FFC28A /* BaseCollectionReusableView.swift in Sources */,
 				611BBA882C4FEEE000FFC28A /* NetworkServiceProtocol.swift in Sources */,
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,

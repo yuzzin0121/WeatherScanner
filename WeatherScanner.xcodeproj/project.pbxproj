@@ -59,6 +59,7 @@
 		611BBAB32C50797400FFC28A /* SectionOfWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */; };
 		611BBAB52C5079D900FFC28A /* WeatherSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB42C5079D900FFC28A /* WeatherSection.swift */; };
 		611BBAB72C507A1E00FFC28A /* DetailInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB62C507A1E00FFC28A /* DetailInfoRow.swift */; };
+		611BBAB92C507A7F00FFC28A /* WeatherEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB82C507A7F00FFC28A /* WeatherEntityMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfWeatherData.swift; sourceTree = "<group>"; };
 		611BBAB42C5079D900FFC28A /* WeatherSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSection.swift; sourceTree = "<group>"; };
 		611BBAB62C507A1E00FFC28A /* DetailInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoRow.swift; sourceTree = "<group>"; };
+		611BBAB82C507A7F00FFC28A /* WeatherEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntityMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				611BBA642C4FE4ED00FFC28A /* CityManager.swift */,
+				611BBAB82C507A7F00FFC28A /* WeatherEntityMapper.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				611BBA7E2C4FED2A00FFC28A /* FetchWeatherQuery.swift in Sources */,
 				611BBAA42C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift in Sources */,
 				611BBA752C4FECB000FFC28A /* TargetType.swift in Sources */,
+				611BBAB92C507A7F00FFC28A /* WeatherEntityMapper.swift in Sources */,
 				611BBA9B2C5075E900FFC28A /* CellBackgroundReusableView.swift in Sources */,
 				611BBAAD2C5078BD00FFC28A /* CurrentWeather.swift in Sources */,
 			);

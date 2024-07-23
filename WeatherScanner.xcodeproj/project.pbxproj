@@ -21,6 +21,7 @@
 		611BBA202C4FC60A00FFC28A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BBA1F2C4FC60A00FFC28A /* Colors.xcassets */; };
 		611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA212C4FC63800FFC28A /* WeatherView.swift */; };
 		611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA232C4FC64200FFC28A /* WeatherViewController.swift */; };
+		611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA252C4FC64F00FFC28A /* WeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

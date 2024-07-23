@@ -12,7 +12,7 @@ final class CityManager {
     var cityHashList: [String: City] = [:]
     
     // 해시 테이블 형태로 저장 O(1)
-    func saveToHashTable() {
+    func saveToHashTable(completionHandler: ((Bool) -> Void)) {
         let cityList = getCityList()
         if !cityList.isEmpty {
             var cityHashList = [String: City]()
@@ -22,8 +22,11 @@ final class CityManager {
             }
             
             self.cityHashList = cityHashList
+            completionHandler(true)
+            print("save Success")
         } else {
             print("error")
+            completionHandler(false)
             // TODO: 에러처리
         }
         

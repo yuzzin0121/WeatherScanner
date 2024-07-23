@@ -58,6 +58,7 @@
 		611BBAB12C5078D000FFC28A /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB02C5078D000FFC28A /* DailyWeather.swift */; };
 		611BBAB32C50797400FFC28A /* SectionOfWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */; };
 		611BBAB52C5079D900FFC28A /* WeatherSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB42C5079D900FFC28A /* WeatherSection.swift */; };
+		611BBAB72C507A1E00FFC28A /* DetailInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB62C507A1E00FFC28A /* DetailInfoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		611BBAB02C5078D000FFC28A /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
 		611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfWeatherData.swift; sourceTree = "<group>"; };
 		611BBAB42C5079D900FFC28A /* WeatherSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSection.swift; sourceTree = "<group>"; };
+		611BBAB62C507A1E00FFC28A /* DetailInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				611BBA812C4FED6B00FFC28A /* WeatherQueryName.swift */,
 				611BBAB22C50797400FFC28A /* SectionOfWeatherData.swift */,
 				611BBAB42C5079D900FFC28A /* WeatherSection.swift */,
+				611BBAB62C507A1E00FFC28A /* DetailInfoRow.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */,
 				611BBA6A2C4FE55900FFC28A /* City.swift in Sources */,
 				611BBAA02C5076C100FFC28A /* HeaderTitleCollectionReusableView.swift in Sources */,
+				611BBAB72C507A1E00FFC28A /* DetailInfoRow.swift in Sources */,
 				611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */,
 				611BBAA22C50771000FFC28A /* CurrentWeatherCollectionViewCell.swift in Sources */,
 				611BBA7A2C4FECEB00FFC28A /* APIKey.swift in Sources */,

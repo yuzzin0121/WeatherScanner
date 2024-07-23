@@ -11,6 +11,7 @@
 		611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BB9942C4E89BF00FFC28A /* SceneDelegate.swift */; };
 		611BB99C2C4E89C200FFC28A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BB99B2C4E89C200FFC28A /* Assets.xcassets */; };
 		611BB9D02C4EA85000FFC28A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 611BB9CF2C4EA85000FFC28A /* .gitignore */; };
+		611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBA122C4FC40900FFC28A /* ViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +19,10 @@
 		611BB9922C4E89BF00FFC28A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		611BB9942C4E89BF00FFC28A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		611BB99B2C4E89C200FFC28A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		611BB9A02C4E89C200FFC28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		611BB9A02C4E89C200FFC28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		611BB9CF2C4EA85000FFC28A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		611BBA102C4FC3F300FFC28A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		611BBA122C4FC40900FFC28A /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		611BB9912C4E89BF00FFC28A /* WeatherScanner */ = {
 			isa = PBXGroup;
 			children = (
+				611BB9A02C4E89C200FFC28A /* Info.plist */,
 				611BB9D12C4EA95B00FFC28A /* Sources */,
 				611BB9B82C4EA70200FFC28A /* Resources */,
 			);
@@ -81,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				611BB99B2C4E89C200FFC28A /* Assets.xcassets */,
-				611BB9A02C4E89C200FFC28A /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 		611BB9C02C4EA77200FFC28A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA122C4FC40900FFC28A /* ViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -174,6 +178,7 @@
 		611BB9C42C4EA79C00FFC28A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				611BBA102C4FC3F300FFC28A /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -339,7 +344,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
+				611BBA132C4FC40900FFC28A /* ViewProtocol.swift in Sources */,
 				611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

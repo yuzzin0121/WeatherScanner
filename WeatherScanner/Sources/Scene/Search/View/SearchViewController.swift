@@ -38,7 +38,24 @@ final class SearchViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-
+        output.cityList
+            .drive(with: self) { owner, cityList in
+                owner.mainView.setEmptyLabelVisible(isEmpty: cityList.isEmpty)
+            }
+            .disposed(by: disposeBag)
+        
+        output.searchResultEmpty
+            .withLatestFrom(output.searchText)
+            .drive(with: self) { owner, searchText in
+                owner.showAlert(title: "도시 검색 결과", message: "\(searchText)와 일치하는 도시가 없습니다\n다시 검색해주세요", actionHandler: nil)
+            }
+            .disposed(by: disposeBag)
+        
+        output.errorMessage
+            .drive(with: self) { owner, errorString in
+                owner.showAlert(title: "도시 검색 결과", message: errorString, actionHandler: nil)
+            }
+            .disposed(by: disposeBag)
     }
 
     override func loadView() {

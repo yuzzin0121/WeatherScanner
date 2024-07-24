@@ -24,11 +24,7 @@ final class CityManager {
                     searchedList.append(city)
                 }
             }
-            if !searchedList.isEmpty {
-                single(.success(.success(searchedList)))
-            } else {
-                single(.success(.failure(CityError.dataEmpty)))
-            }
+            single(.success(.success(searchedList)))
             
             return Disposables.create()
         }

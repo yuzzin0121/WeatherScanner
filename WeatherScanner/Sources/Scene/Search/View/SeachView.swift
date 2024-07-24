@@ -12,8 +12,18 @@ final class SearchView: BaseView {
     private lazy var visualEffectView = UIVisualEffectView(effect: blurEffect)
     
     let searchBar = SearchBar(placeholder: "도시 이름 검색")
+    let emptyMessageLabel = UILabel()
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
+    func setSearchBarTextEmpty(isEmpty: Bool) {
+        if isEmpty {
+            searchBar.text = ""
+        }
+    }
+    
+    func setEmptyLabelVisible(isEmpty: Bool) {
+        emptyMessageLabel.isHidden = !isEmpty
+    }
     
     func setFirstResponder() {
         searchBar.becomeFirstResponder()
@@ -23,6 +33,7 @@ final class SearchView: BaseView {
         addSubview(visualEffectView)
         addSubview(searchBar)
         addSubview(collectionView)
+        addSubview(emptyMessageLabel)
     }
     
     override func configureLayout() {
@@ -39,6 +50,10 @@ final class SearchView: BaseView {
             make.top.equalTo(searchBar.snp.bottom).offset(12)
             make.horizontalEdges.bottom.equalTo(safeAreaLayoutGuide)
         }
+        
+        emptyMessageLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
     
     override func configureView() {
@@ -46,6 +61,8 @@ final class SearchView: BaseView {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .clear
         collectionView.register(CityCollectionViewCell.self, forCellWithReuseIdentifier: CityCollectionViewCell.identifier)
+        
+        emptyMessageLabel.design(text: "현재 일치하는 도시가 없습니다\n 다시 검색해주세요", textColor: Color.backgroundGray, numberOfLines: 2)
     }
 }
 

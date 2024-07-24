@@ -6,20 +6,44 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 final class WeatherView: BaseView {
     let searchBar = SearchBar(placeholder: "도시 검색")
     let tapButton = UIButton()
+    
+    let activityIndicatorView = NVActivityIndicatorView(frame: .zero, type: .orbit, color: .systemYellow)
     
     private let weatherBackgroundImageView = UIImageView()
     lazy var weatherCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
 
     func setWeatherBackgroundImage(weatherString: String) {
         print(weatherString)
-        UIView.animate(withDuration: 1.0) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
             guard let self else { return }
+            activityIndicatorView.stopAnimating()
+            
             weatherBackgroundImageView.image = UIImage(named: weatherString)
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                guard let self else { return }
+                setAlphaZero(false)
+            }
         }
+    }
+    
+    func startLoading() {
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let self else { return }
+            setAlphaZero(true)
+        }
+        
+        activityIndicatorView.startAnimating()
+    }
+    
+    private func setAlphaZero(_ isZero: Bool) {
+        searchBar.alpha = isZero ? 0 : 1
+        weatherBackgroundImageView.alpha = isZero ? 0 : 1
+        weatherCollectionView.alpha = isZero ? 0 : 1
     }
     
     override func configureHierarchy() {
@@ -27,6 +51,7 @@ final class WeatherView: BaseView {
         addSubview(searchBar)
         addSubview(tapButton)
         addSubview(weatherCollectionView)
+        addSubview(activityIndicatorView)
     }
     
     override func configureLayout() {
@@ -50,7 +75,12 @@ final class WeatherView: BaseView {
         weatherCollectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom).offset(16)
             make.bottom.equalTo(safeAreaLayoutGuide)
-            make.horizontalEdges.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(16)
+        }
+        
+        activityIndicatorView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(80)
         }
     }
     
@@ -60,7 +90,10 @@ final class WeatherView: BaseView {
         
         searchBar.isUserInteractionEnabled = false
         tapButton.backgroundColor = .clear
+        searchBar.alpha = 0
+        weatherBackgroundImageView.alpha = 0
         
+        weatherCollectionView.alpha = 0
         weatherCollectionView.backgroundColor = .clear
         weatherCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         weatherCollectionView.showsVerticalScrollIndicator = false
@@ -99,8 +132,6 @@ extension WeatherView {
                 case .humidity, .clouds, .windSpeed:
                     section = weatherInfoLayout()
                 }
-                
-                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 16, trailing: 16)
         
                 return section
             } else {
@@ -132,6 +163,7 @@ extension WeatherView {
         sectionHeader.pinToVisibleBounds = true
         sectionHeader.zIndex = 3
         section.boundarySupplementaryItems = [sectionHeader]
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         return section
     }
     
@@ -160,20 +192,20 @@ extension WeatherView {
         sectionHeader.pinToVisibleBounds = true
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader]
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         return section
     }
     
     @discardableResult
     private func fiveDaysWeatherLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .absolute(60))
+                                              heightDimension: .absolute(64))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(500))
+                                               heightDimension: .estimated(535))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         group.interItemSpacing = .fixed(10)
         
@@ -188,7 +220,7 @@ extension WeatherView {
         sectionHeader.pinToVisibleBounds = true
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader]
-    
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         return section
     }
     
@@ -217,6 +249,8 @@ extension WeatherView {
         
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: CellBackgroundReusableView.identifier)
         section.decorationItems = [sectionBackgroundDecoration]
+        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 16, trailing: 16)
         return section
     }
     
@@ -233,7 +267,7 @@ extension WeatherView {
         group.interItemSpacing = .fixed(14)
         
         let section = NSCollectionLayoutSection(group: group)
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
         return section
     }
 }

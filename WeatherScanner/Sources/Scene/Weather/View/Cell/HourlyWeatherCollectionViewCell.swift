@@ -53,7 +53,7 @@ final class HourlyWeatherCollectionViewCell: BaseCollectionViewCell {
     override func configureView() {
         visualEffectView.layer.masksToBounds = true
         
-        stackView.design(spacing: 6)
+        stackView.design(spacing: 4)
         timeLabel.design(font: .systemFont(ofSize: 14, weight: .semibold),
                          textAlignment: .center)
         weatherImageView.contentMode = .scaleAspectFit

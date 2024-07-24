@@ -15,22 +15,24 @@ final class WeatherViewModel: ViewModelType {
     struct Input {
         let viewDidLoadTrigger: Observable<Void>
         let searchBarTapped: Observable<Void>
+        let fetchWeatherOfCity: Observable<City>
     }
     
     struct Output {
         let searchButtonTapped: Driver<Void>
         let sectionWeatherDataList: PublishSubject<[SectionOfWeatherData]>
         let currentWeather: Driver<String>
-        let errorString: Driver<String>
+        let errorMessage: Driver<String>
     }
     
     func transform(input: Input) -> Output {
         let searchButtonTapped = PublishRelay<Void>()
         let sectionWeatherDataList = PublishSubject<[SectionOfWeatherData]>()
         let currentWeather = PublishRelay<String>()
-        let errorString = PublishRelay<String>()
+        let errorMessage = PublishRelay<String>()
         
         input.searchBarTapped
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .bind { _ in
                 searchButtonTapped.accept(())
             }
@@ -58,15 +60,37 @@ final class WeatherViewModel: ViewModelType {
                     sectionWeatherDataList.onNext(sectionDataList)
                     currentWeather.accept(fetchWeatherModel.list[0].weather[0].main)
                 case .failure(let error):
-                    errorString.accept(error.localizedDescription)
+                    errorMessage.accept(error.localizedDescription)
                 }
             }
             .disposed(by: disposeBag)
         
-        return Output(searchButtonTapped: searchButtonTapped.asDriver(onErrorDriveWith: .empty()), 
+        input.fetchWeatherOfCity
+            .flatMap { city in
+                return WeatherNetworkManager.shared.request(model: FetchWeatherModel.self,
+                                                             router: WeatherRouter.fetchWeather(
+                                                                fetchWeatherQuery: FetchWeatherQuery(
+                                                                    lat: city.coord.lat,
+                                                                    lon: city.coord.lon)
+                                                             )
+                )
+            }
+            .bind(with: self) { owner, result in
+                switch result {
+                case .success(let fetchWeatherModel):
+                    let sectionDataList = owner.getSectionWeatherDataList(weatherModel: fetchWeatherModel)
+                    sectionWeatherDataList.onNext(sectionDataList)
+                    currentWeather.accept(fetchWeatherModel.list[0].weather[0].main)
+                case .failure(let error):
+                    errorMessage.accept(error.localizedDescription)
+                }
+            }
+            .disposed(by: disposeBag)
+        
+        return Output(searchButtonTapped: searchButtonTapped.asDriver(onErrorDriveWith: .empty()),
                       sectionWeatherDataList: sectionWeatherDataList,
                       currentWeather: currentWeather.asDriver(onErrorDriveWith: .empty()),
-                      errorString: errorString.asDriver(onErrorDriveWith: .empty()))
+                      errorMessage: errorMessage.asDriver(onErrorDriveWith: .empty()))
     }
     
     private func getSectionWeatherDataList(weatherModel: FetchWeatherModel) -> [SectionOfWeatherData] {

@@ -47,12 +47,12 @@ final class DailyWeatherCollectionViewCell: BaseCollectionViewCell {
         }
         
         backgroundStackView.snp.makeConstraints { make in
-            make.verticalEdges.equalToSuperview().inset(6)
+            make.verticalEdges.equalToSuperview().inset(4)
             make.horizontalEdges.equalToSuperview().inset(14)
         }
         
         weatherImageView.snp.makeConstraints { make in
-            make.size.equalTo(30)
+            make.size.equalTo(40)
         }
     }
     
@@ -61,13 +61,13 @@ final class DailyWeatherCollectionViewCell: BaseCollectionViewCell {
         weatherImageView.contentMode = .scaleAspectFit
         backgroundStackView.design(axis: .horizontal, distribution: .equalCentering)
         tempStackView.design(axis: .horizontal, alignment: .fill, spacing: 12)
-        dayLabel.design(font: .systemFont(ofSize: 16, weight: .semibold))
-        tempMinLabel.design(font: .systemFont(ofSize: 14, weight: .semibold))
-        tempMaxLabel.design(font: .systemFont(ofSize: 14, weight: .semibold))
+        dayLabel.design(font: .systemFont(ofSize: 18, weight: .semibold))
+        tempMinLabel.design(font: .systemFont(ofSize: 16, weight: .semibold))
+        tempMaxLabel.design(font: .systemFont(ofSize: 16, weight: .semibold))
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        visualEffectView.layer.cornerRadius = visualEffectView.frame.height / 3
+        visualEffectView.layer.cornerRadius = visualEffectView.frame.height / 2.5
     }
 }

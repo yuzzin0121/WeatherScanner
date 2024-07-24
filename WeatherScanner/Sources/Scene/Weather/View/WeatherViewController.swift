@@ -16,6 +16,7 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
     
     private let viewModel: WeatherViewModel
     private var dataSource: RxCollectionViewSectionedReloadDataSource<SectionOfWeatherData>!
+    private let fetchWeatherOfCity = PublishSubject<City>()
     
     init(viewModel: WeatherViewModel) {
         self.viewModel = viewModel
@@ -24,14 +25,14 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func bind() {
         configureCollectionViewDataSource()
         
         let input = WeatherViewModel.Input(viewDidLoadTrigger: Observable.just(()),
-                                           searchBarTapped: mainView.tapButton.rx.tap.asObservable())
+                                           searchBarTapped: mainView.tapButton.rx.tap.asObservable(),
+                                           fetchWeatherOfCity: fetchWeatherOfCity.asObservable())
         let output = viewModel.transform(input: input)
         
         output.sectionWeatherDataList
@@ -49,6 +50,12 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
                 owner.showSearchVC()
             }
             .disposed(by: disposeBag)
+        
+        output.errorMessage
+            .drive(with: self) { owner, errorMessage in
+                owner.showAlert(title: "일기예보 탐색", message: errorMessage, actionHandler: nil)
+            }
+            .disposed(by: disposeBag)
     }
     
     // 검색 화면 present, delegate 설정
@@ -64,6 +71,8 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
     
     func sendCity(_ city: City) {
         print(city)
+        mainView.startLoading()
+        fetchWeatherOfCity.onNext(city)
     }
 }
 

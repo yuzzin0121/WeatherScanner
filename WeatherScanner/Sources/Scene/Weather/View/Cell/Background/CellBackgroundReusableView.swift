@@ -13,7 +13,7 @@ final class CellBackgroundReusableView: BaseCollectionReusableView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        visualEffectView.layer.cornerRadius = 10
+        visualEffectView.layer.cornerRadius = 14
         visualEffectView.clipsToBounds = true
     }
     

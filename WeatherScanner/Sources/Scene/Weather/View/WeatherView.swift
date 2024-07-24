@@ -102,7 +102,7 @@ extension WeatherView {
     
     @discardableResult
     private func hourlyWeatherLayout() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(90),
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(98),
                                               heightDimension: .absolute(110))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)

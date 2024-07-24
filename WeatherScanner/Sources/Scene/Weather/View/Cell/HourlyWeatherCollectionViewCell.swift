@@ -41,18 +41,19 @@ final class HourlyWeatherCollectionViewCell: BaseCollectionViewCell {
         }
         
         stackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(4)
+            make.horizontalEdges.equalToSuperview().inset(10)
+            make.verticalEdges.equalToSuperview().inset(12)
         }
         
         weatherImageView.snp.makeConstraints { make in
-            make.size.equalTo(30)
+            make.size.equalTo(40)
         }
     }
     
     override func configureView() {
         visualEffectView.layer.masksToBounds = true
         
-        stackView.design()
+        stackView.design(spacing: 6)
         timeLabel.design(font: .systemFont(ofSize: 14, weight: .semibold),
                          textAlignment: .center)
         weatherImageView.contentMode = .scaleAspectFit
@@ -62,6 +63,6 @@ final class HourlyWeatherCollectionViewCell: BaseCollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        visualEffectView.layer.cornerRadius = visualEffectView.frame.height / 3
+        visualEffectView.layer.cornerRadius = visualEffectView.frame.height / 2.8
     }
 }

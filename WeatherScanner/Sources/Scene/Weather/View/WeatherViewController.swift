@@ -25,7 +25,6 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.startLoading()
     }
     
     override func bind() {

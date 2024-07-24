@@ -20,7 +20,7 @@ final class CurrentWeatherHeaderCollectionReusableView: BaseCollectionReusableVi
     
     override func configureLayout() {
         locationNameLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(14)
             make.centerY.equalToSuperview()
         }
     }

@@ -51,9 +51,8 @@ final class SplashViewController: UIViewController {
     
     private func showWeatherVC() {
         let weatherVC = WeatherViewController(viewModel: WeatherViewModel())
-        let nav = UINavigationController(rootViewController: weatherVC)
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: false)
+        weatherVC.modalPresentationStyle = .fullScreen
+        present(weatherVC, animated: false)
     }
     
     private func configureHierarchy() {

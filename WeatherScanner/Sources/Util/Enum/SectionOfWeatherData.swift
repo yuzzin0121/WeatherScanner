@@ -36,7 +36,7 @@ enum SectionOfWeatherData: SectionModelType {
         }
     }
     
-    public init(original: SectionOfWeatherData, items: [Row]) {
+    init(original: SectionOfWeatherData, items: [Row]) {
     switch original {
     case .currentWeatherSection(let header, _):
       self = .currentWeatherSection(header: header, items: items)

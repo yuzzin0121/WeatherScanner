@@ -43,4 +43,9 @@ final class LocationMapCollectionViewCell: BaseCollectionViewCell {
     override func configureView() {
         mapView.isScrollEnabled = false
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        mapView.layer.cornerRadius = 14
+    }
 }

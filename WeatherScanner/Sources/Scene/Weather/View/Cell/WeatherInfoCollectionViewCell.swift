@@ -56,7 +56,7 @@ final class WeatherInfoCollectionViewCell: BaseCollectionViewCell {
     }
     
     override func configureView() {
-        headerLabel.design(font: .systemFont(ofSize: 12, weight: .regular))
+        headerLabel.design(font: .systemFont(ofSize: 14, weight: .regular))
         valueLabel.design(font: .boldSystemFont(ofSize: 26), numberOfLines: 2)
         subValueLabel.design(textColor: .lightGray, textAlignment: .left)
     }

@@ -83,7 +83,7 @@ extension WeatherView {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .fractionalHeight(0.3))
+                                               heightDimension: .fractionalHeight(0.2))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
@@ -103,13 +103,13 @@ extension WeatherView {
     @discardableResult
     private func hourlyWeatherLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(90),
-                                              heightDimension: .fractionalHeight(1.0))
+                                              heightDimension: .absolute(110))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .estimated(400.0),
-                                               heightDimension: .fractionalHeight(0.25))
+                                               heightDimension: .estimated(140))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         group.interItemSpacing = .fixed(24)
         

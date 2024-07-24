@@ -26,6 +26,6 @@ final class CurrentWeatherHeaderCollectionReusableView: BaseCollectionReusableVi
     }
     
     override func configureView() {
-        locationNameLabel.design(font: .systemFont(ofSize: 24, weight: .semibold))
+        locationNameLabel.design(font: .systemFont(ofSize: 28, weight: .semibold))
     }
 }

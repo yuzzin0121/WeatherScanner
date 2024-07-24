@@ -22,11 +22,11 @@ final class HeaderTitleCollectionReusableView: BaseCollectionReusableView {
     override func configureLayout() {
         titleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
     
     override func configureView() {
-        titleLabel.design(textColor: Color.white, font: .systemFont(ofSize: 12, weight: .regular))
+        titleLabel.design(textColor: Color.white, font: .systemFont(ofSize: 14, weight: .regular))
     }
 }

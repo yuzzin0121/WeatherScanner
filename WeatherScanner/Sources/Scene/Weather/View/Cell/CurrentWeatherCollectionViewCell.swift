@@ -34,9 +34,9 @@ final class CurrentWeatherCollectionViewCell: BaseCollectionViewCell {
     }
     
     override func configureView() {
-        stackView.design()
-        tempLabel.design(font: .systemFont(ofSize: 36, weight: .bold), textAlignment: .center)
+        stackView.design(spacing: 6)
+        tempLabel.design(font: .systemFont(ofSize: 64, weight: .bold), textAlignment: .center)
         descriptionLabel.design(font: .systemFont(ofSize: 24, weight: .semibold), textAlignment: .center)
-        tempDetailLabel.design(font: .systemFont(ofSize: 16, weight: .semibold), textAlignment: .center)
+        tempDetailLabel.design(font: .systemFont(ofSize: 20, weight: .semibold), textAlignment: .center)
     }
 }

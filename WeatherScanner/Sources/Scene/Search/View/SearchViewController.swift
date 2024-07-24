@@ -64,7 +64,7 @@ final class SearchViewController: BaseViewController {
         output.cityCellTapped
             .drive(with: self) { owner, city in
                 owner.sendCityDelegate?.sendCity(city)
-                owner.dismiss()
+                owner.dismiss(animated: true)
             }
             .disposed(by: disposeBag)
     }

@@ -70,6 +70,7 @@
 		611BBACB2C507DF200FFC28A /* Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBACA2C507DF200FFC28A /* Reuse.swift */; };
 		611BBACE2C5086D800FFC28A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBACD2C5086D800FFC28A /* SearchBar.swift */; };
 		611BBAD02C50877600FFC28A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBACF2C50877600FFC28A /* Image.swift */; };
+		611BBAD52C50931700FFC28A /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAD42C50931700FFC28A /* CityCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		611BBACA2C507DF200FFC28A /* Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reuse.swift; sourceTree = "<group>"; };
 		611BBACD2C5086D800FFC28A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		611BBACF2C50877600FFC28A /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		611BBAD42C50931700FFC28A /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 		611BB9BD2C4EA75600FFC28A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				611BBAD32C50930500FFC28A /* Cell */,
 				611BBA272C4FC76F00FFC28A /* SeachView.swift */,
 				611BBA292C4FC77E00FFC28A /* SearchViewController.swift */,
 			);
@@ -503,6 +506,14 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		611BBAD32C50930500FFC28A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				611BBAD42C50931700FFC28A /* CityCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -631,6 +642,7 @@
 				611BB9952C4E89BF00FFC28A /* SceneDelegate.swift in Sources */,
 				611BBA6A2C4FE55900FFC28A /* City.swift in Sources */,
 				611BBAA02C5076C100FFC28A /* HeaderTitleCollectionReusableView.swift in Sources */,
+				611BBAD52C50931700FFC28A /* CityCollectionViewCell.swift in Sources */,
 				611BBAB72C507A1E00FFC28A /* DetailInfoRow.swift in Sources */,
 				611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */,
 				611BBAA22C50771000FFC28A /* CurrentWeatherCollectionViewCell.swift in Sources */,

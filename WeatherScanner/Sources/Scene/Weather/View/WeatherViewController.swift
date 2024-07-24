@@ -29,7 +29,8 @@ final class WeatherViewController: BaseViewController {
     override func bind() {
         configureCollectionViewDataSource()
         
-        let input = WeatherViewModel.Input(viewDidLoadTrigger: Observable.just(()))
+        let input = WeatherViewModel.Input(viewDidLoadTrigger: Observable.just(()),
+                                           searchBarTapped: mainView.tapButton.rx.tap.asObservable())
         let output = viewModel.transform(input: input)
         
         output.sectionWeatherDataList
@@ -41,11 +42,18 @@ final class WeatherViewController: BaseViewController {
                 owner.mainView.setWeatherBackgroundImage(weatherString: weatherString)
             }
             .disposed(by: disposeBag)
+        
+        output.searchButtonTapped
+            .drive(with: self) { owner, _ in
+                owner.showSearchVC()
+            }
+            .disposed(by: disposeBag)
     }
 
     override func loadView() {
         view = mainView
     }
+    
 }
 
 extension WeatherViewController {

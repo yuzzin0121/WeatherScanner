@@ -8,7 +8,9 @@
 import UIKit
 
 final class WeatherView: BaseView {
-    private let searchBar = SearchBar(placeholder: "도시 검색")
+    let searchBar = SearchBar(placeholder: "도시 검색")
+    let tapButton = UIButton()
+    
     private let weatherBackgroundImageView = UIImageView()
     lazy var weatherCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
 
@@ -23,6 +25,7 @@ final class WeatherView: BaseView {
     override func configureHierarchy() {
         addSubview(weatherBackgroundImageView)
         addSubview(searchBar)
+        addSubview(tapButton)
         addSubview(weatherCollectionView)
     }
     
@@ -38,6 +41,12 @@ final class WeatherView: BaseView {
             make.height.equalTo(50)
         }
         
+        tapButton.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(20)
+            make.top.equalTo(safeAreaLayoutGuide).offset(12)
+            make.height.equalTo(50)
+        }
+        
         weatherCollectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom).offset(16)
             make.bottom.equalTo(safeAreaLayoutGuide)
@@ -48,7 +57,9 @@ final class WeatherView: BaseView {
     override func configureView() {
         super.configureView()
         backgroundColor = Color.backgroundBlue
+        
         searchBar.isUserInteractionEnabled = false
+        tapButton.backgroundColor = .clear
         
         weatherCollectionView.backgroundColor = .clear
         weatherCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

@@ -14,18 +14,27 @@ final class WeatherViewModel: ViewModelType {
     
     struct Input {
         let viewDidLoadTrigger: Observable<Void>
+        let searchBarTapped: Observable<Void>
     }
     
     struct Output {
+        let searchButtonTapped: Driver<Void>
         let sectionWeatherDataList: PublishSubject<[SectionOfWeatherData]>
         let currentWeather: Driver<String>
         let errorString: Driver<String>
     }
     
     func transform(input: Input) -> Output {
+        let searchButtonTapped = PublishRelay<Void>()
         let sectionWeatherDataList = PublishSubject<[SectionOfWeatherData]>()
         let currentWeather = PublishRelay<String>()
         let errorString = PublishRelay<String>()
+        
+        input.searchBarTapped
+            .bind { _ in
+                searchButtonTapped.accept(())
+            }
+            .disposed(by: disposeBag)
         
         input.viewDidLoadTrigger
             .map {
@@ -54,7 +63,8 @@ final class WeatherViewModel: ViewModelType {
             }
             .disposed(by: disposeBag)
         
-        return Output(sectionWeatherDataList: sectionWeatherDataList,
+        return Output(searchButtonTapped: searchButtonTapped.asDriver(onErrorDriveWith: .empty()), 
+                      sectionWeatherDataList: sectionWeatherDataList,
                       currentWeather: currentWeather.asDriver(onErrorDriveWith: .empty()),
                       errorString: errorString.asDriver(onErrorDriveWith: .empty()))
     }

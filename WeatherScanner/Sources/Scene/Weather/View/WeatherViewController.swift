@@ -148,3 +148,18 @@ extension WeatherViewController {
     }
 }
 
+extension WeatherViewController {
+    enum DetailInfoRow: Int {
+        case humidity
+        case cloud
+        case windSpeed
+        
+        var header: String {
+            switch self {
+            case .humidity: "습도"
+            case .cloud: "구름"
+            case .windSpeed: "바람 속도"
+            }
+        }
+    }
+}

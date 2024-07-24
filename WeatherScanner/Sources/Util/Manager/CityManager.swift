@@ -10,7 +10,9 @@ import RxSwift
 
 final class CityManager {
     static let shared = CityManager()
-    var cityList: [City] = []
+    private var cityList: [City] = []
+    
+    private init() { }
     
     // 도시 검색
     func searchCity(name: String) -> Single<Result<[City], Error>> {

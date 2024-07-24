@@ -36,7 +36,6 @@ final class SearchViewController: BaseViewController {
         
         output.cityList
             .drive(mainView.collectionView.rx.items(cellIdentifier: CityCollectionViewCell.identifier, cellType: CityCollectionViewCell.self)) { index, city, cell in
-                print(city)
                 cell.configureCell(city: city)
             }
             .disposed(by: disposeBag)

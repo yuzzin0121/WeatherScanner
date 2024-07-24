@@ -73,7 +73,6 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
     }
     
     func sendCity(_ city: City) {
-        print(city)
         mainView.startLoading()
         fetchWeatherOfCity.onNext(city)
     }

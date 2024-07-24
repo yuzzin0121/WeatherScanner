@@ -70,7 +70,6 @@ final class SearchViewModel: ViewModelType {
             .throttle(.seconds(2), scheduler: MainScheduler.instance)
             .withLatestFrom(input.searchText)
             .flatMap { text in
-                print(text)
                 if searchStringValid.value == true {
                     return CityManager.shared.searchCity(name: text)
                 } else {
@@ -80,7 +79,6 @@ final class SearchViewModel: ViewModelType {
             .bind(with: self, onNext: { owner, result in
                 switch result {
                 case .success(let cityList):
-                    print(cityList)
                     if cityList.isEmpty {
                         searchResultEmpty.accept(())
                     }

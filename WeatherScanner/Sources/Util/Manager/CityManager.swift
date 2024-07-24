@@ -62,9 +62,7 @@ final class CityManager {
     
     // 구조체 배열로 변환
     private func decodeToCityList() -> [City] {
-        print(#function)
         guard let url = getJsonUrl() else {
-            // 에러 처리 필요
             return []
         }
         

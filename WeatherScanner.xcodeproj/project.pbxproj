@@ -63,6 +63,7 @@
 		611BBABB2C507AE000FFC28A /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABA2C507AE000FFC28A /* DateManager.swift */; };
 		611BBABD2C507BE900FFC28A /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABC2C507BE900FFC28A /* Double+Extension.swift */; };
 		611BBABF2C507C6A00FFC28A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */; };
+		611BBAC12C507CD500FFC28A /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAC02C507CD500FFC28A /* UIStackView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		611BBABA2C507AE000FFC28A /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		611BBABC2C507BE900FFC28A /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		611BBAC02C507CD500FFC28A /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 			children = (
 				611BBABC2C507BE900FFC28A /* Double+Extension.swift */,
 				611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */,
+				611BBAC02C507CD500FFC28A /* UIStackView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 			files = (
 				611BBA7C2C4FED0C00FFC28A /* WeatherRouter.swift in Sources */,
 				611BBA152C4FC47500FFC28A /* BaseViewController.swift in Sources */,
+				611BBAC12C507CD500FFC28A /* UIStackView+Extension.swift in Sources */,
 				611BBA242C4FC64200FFC28A /* WeatherViewController.swift in Sources */,
 				611BBA862C4FEEB000FFC28A /* WeatherNetworkManager.swift in Sources */,
 				611BBA802C4FED4400FFC28A /* Language.swift in Sources */,

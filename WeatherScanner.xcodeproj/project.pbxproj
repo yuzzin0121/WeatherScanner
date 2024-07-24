@@ -61,6 +61,7 @@
 		611BBAB72C507A1E00FFC28A /* DetailInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB62C507A1E00FFC28A /* DetailInfoRow.swift */; };
 		611BBAB92C507A7F00FFC28A /* WeatherEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB82C507A7F00FFC28A /* WeatherEntityMapper.swift */; };
 		611BBABB2C507AE000FFC28A /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABA2C507AE000FFC28A /* DateManager.swift */; };
+		611BBABD2C507BE900FFC28A /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABC2C507BE900FFC28A /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		611BBAB62C507A1E00FFC28A /* DetailInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoRow.swift; sourceTree = "<group>"; };
 		611BBAB82C507A7F00FFC28A /* WeatherEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntityMapper.swift; sourceTree = "<group>"; };
 		611BBABA2C507AE000FFC28A /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		611BBABC2C507BE900FFC28A /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 		611BB9C12C4EA77900FFC28A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				611BBABC2C507BE900FFC28A /* Double+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				611BBA222C4FC63800FFC28A /* WeatherView.swift in Sources */,
 				611BBAA22C50771000FFC28A /* CurrentWeatherCollectionViewCell.swift in Sources */,
 				611BBA7A2C4FECEB00FFC28A /* APIKey.swift in Sources */,
+				611BBABD2C507BE900FFC28A /* Double+Extension.swift in Sources */,
 				611BBA7E2C4FED2A00FFC28A /* FetchWeatherQuery.swift in Sources */,
 				611BBAA42C50776700FFC28A /* HourlyWeatherCollectionViewCell.swift in Sources */,
 				611BBA752C4FECB000FFC28A /* TargetType.swift in Sources */,

@@ -76,6 +76,7 @@
 		611BBAE52C50C3F100FFC28A /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAE42C50C3F100FFC28A /* NVActivityIndicatorView */; };
 		611BBAE72C50C3F100FFC28A /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAE62C50C3F100FFC28A /* NVActivityIndicatorViewExtended */; };
 		611BBAE92C50D21400FFC28A /* NetworkMonitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAE82C50D21400FFC28A /* NetworkMonitorManager.swift */; };
+		611BBAEB2C50D98400FFC28A /* NetworkConnectionErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAEA2C50D98400FFC28A /* NetworkConnectionErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		611BBADC2C50B1A400FFC28A /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		611BBADE2C50B32500FFC28A /* SendCityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCityDelegate.swift; sourceTree = "<group>"; };
 		611BBAE82C50D21400FFC28A /* NetworkMonitorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorManager.swift; sourceTree = "<group>"; };
+		611BBAEA2C50D98400FFC28A /* NetworkConnectionErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				611BBACD2C5086D800FFC28A /* SearchBar.swift */,
+				611BBAEA2C50D98400FFC28A /* NetworkConnectionErrorView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				611BBAAA2C50780900FFC28A /* WeatherInfoCollectionViewCell.swift in Sources */,
 				611BBA842C4FEE5400FFC28A /* WeatherAPIError.swift in Sources */,
 				611BBA1C2C4FC5C300FFC28A /* ViewModelType.swift in Sources */,
+				611BBAEB2C50D98400FFC28A /* NetworkConnectionErrorView.swift in Sources */,
 				611BBA9E2C5076AA00FFC28A /* CurrentWeatherHeaderCollectionReusableView.swift in Sources */,
 				611BBAB12C5078D000FFC28A /* DailyWeather.swift in Sources */,
 				611BBAB52C5079D900FFC28A /* WeatherSection.swift in Sources */,

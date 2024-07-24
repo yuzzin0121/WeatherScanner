@@ -10,4 +10,5 @@ import UIKit
 enum Image {
     static let search: UIImage = .search
     static let x: UIImage = .X
+    static let cloudOff: UIImage = .cloudOff
 }

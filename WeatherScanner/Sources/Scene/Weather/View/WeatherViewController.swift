@@ -10,7 +10,8 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-final class WeatherViewController: BaseViewController {
+
+final class WeatherViewController: BaseViewController, SendCityDelegate {
     private let mainView = WeatherView()
     
     private let viewModel: WeatherViewModel
@@ -49,11 +50,21 @@ final class WeatherViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
     }
+    
+    // 검색 화면 present, delegate 설정
+    func showSearchVC() {
+        let searchVC = SearchViewController(viewModel: SearchViewModel())
+        searchVC.sendCityDelegate = self
+        present(searchVC, animated: true)
+    }
 
     override func loadView() {
         view = mainView
     }
     
+    func sendCity(_ city: City) {
+        print(city)
+    }
 }
 
 extension WeatherViewController {

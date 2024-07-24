@@ -14,12 +14,14 @@ final class SearchViewModel: ViewModelType {
     struct Input {
         let searchText: Observable<String>
         let searchButtonTap: Observable<Void>
+        let cityCellTapped: Observable<City>
     }
     
     struct Output {
         let cityList: Driver<[City]>
         let searchText: Driver<String>
         let searchResultEmpty: Driver<Void>
+        let cityCellTapped: Driver<City>
         let errorMessage: Driver<String>
     }
     
@@ -28,6 +30,7 @@ final class SearchViewModel: ViewModelType {
         let searchText = PublishRelay<String>()
         let searchStringValid = BehaviorRelay(value: false)
         let searchResultEmpty = PublishRelay<Void>()
+        let cityCellTapped = PublishRelay<City>()
         let errorMessage = PublishRelay<String>()
         
         input.searchText
@@ -87,9 +90,17 @@ final class SearchViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
         
+        input.cityCellTapped
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .bind { city in
+                cityCellTapped.accept(city)
+            }  
+            .disposed(by: disposeBag)
+        
         return Output(cityList: cityListRelay.asDriver(onErrorJustReturn: []),
                       searchText: searchText.asDriver(onErrorDriveWith: .empty()),
-                      searchResultEmpty: searchResultEmpty.asDriver(onErrorDriveWith: .empty()),
+                      searchResultEmpty: searchResultEmpty.asDriver(onErrorDriveWith: .empty()), 
+                      cityCellTapped: cityCellTapped.asDriver(onErrorDriveWith: .empty()),
                       errorMessage: errorMessage.asDriver(onErrorDriveWith: .empty()))
     }
 }

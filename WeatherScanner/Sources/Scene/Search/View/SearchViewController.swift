@@ -11,6 +11,8 @@ final class SearchViewController: BaseViewController {
     let mainView = SearchView()
     private let viewModel: SearchViewModel
     
+    weak var sendCityDelegate: SendCityDelegate?
+    
     init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
         super.init()
@@ -28,7 +30,8 @@ final class SearchViewController: BaseViewController {
     
     override func bind() {
         let input = SearchViewModel.Input(searchText: mainView.searchBar.rx.text.orEmpty.asObservable(),
-                                          searchButtonTap: mainView.searchBar.rx.searchButtonClicked.asObservable())
+                                          searchButtonTap: mainView.searchBar.rx.searchButtonClicked.asObservable(), 
+                                          cityCellTapped: mainView.collectionView.rx.modelSelected(City.self).asObservable())
         let output = viewModel.transform(input: input)
         
         output.cityList
@@ -56,8 +59,16 @@ final class SearchViewController: BaseViewController {
                 owner.showAlert(title: "도시 검색 결과", message: errorString, actionHandler: nil)
             }
             .disposed(by: disposeBag)
+        
+        // 도시 선택했을 때
+        output.cityCellTapped
+            .drive(with: self) { owner, city in
+                owner.sendCityDelegate?.sendCity(city)
+                owner.dismiss()
+            }
+            .disposed(by: disposeBag)
     }
-
+    
     override func loadView() {
         view = mainView
     }

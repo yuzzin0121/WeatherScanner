@@ -41,9 +41,8 @@ class BaseViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    func showSearchVC() {
-        let searchVC = SearchViewController(viewModel: SearchViewModel())
-        present(searchVC, animated: true)
+    func dismiss() {
+        
     }
     
     @available (*, unavailable)

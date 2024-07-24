@@ -57,6 +57,7 @@ final class SearchView: BaseView {
     }
     
     override func configureView() {
+        collectionView.keyboardDismissMode = .onDrag    // 키보드 드래그 시 dismiss
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .clear

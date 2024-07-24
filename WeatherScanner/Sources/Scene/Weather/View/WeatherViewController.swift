@@ -162,4 +162,9 @@ extension WeatherViewController {
             }
         }
     }
+    
+    protocol SendCityDelegate: AnyObject {
+        func sendCity(_ city: City)
+    }
+
 }

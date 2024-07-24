@@ -71,7 +71,6 @@
 		611BBAD92C50B18D00FFC28A /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAD82C50B18D00FFC28A /* Double+Extension.swift */; };
 		611BBADB2C50B19D00FFC28A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBADA2C50B19D00FFC28A /* UILabel+Extension.swift */; };
 		611BBADD2C50B1A400FFC28A /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBADC2C50B1A400FFC28A /* UIStackView+Extension.swift */; };
-		611BBADF2C50B32500FFC28A /* SendCityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBADE2C50B32500FFC28A /* SendCityDelegate.swift */; };
 		611BBAE52C50C3F100FFC28A /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAE42C50C3F100FFC28A /* NVActivityIndicatorView */; };
 		611BBAE72C50C3F100FFC28A /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAE62C50C3F100FFC28A /* NVActivityIndicatorViewExtended */; };
 		611BBAE92C50D21400FFC28A /* NetworkMonitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAE82C50D21400FFC28A /* NetworkMonitorManager.swift */; };
@@ -137,7 +136,6 @@
 		611BBAD82C50B18D00FFC28A /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		611BBADA2C50B19D00FFC28A /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		611BBADC2C50B1A400FFC28A /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		611BBADE2C50B32500FFC28A /* SendCityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCityDelegate.swift; sourceTree = "<group>"; };
 		611BBAE82C50D21400FFC28A /* NetworkMonitorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorManager.swift; sourceTree = "<group>"; };
 		611BBAEA2C50D98400FFC28A /* NetworkConnectionErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,7 +288,6 @@
 				611BBA1B2C4FC5C200FFC28A /* ViewModelType.swift */,
 				611BBA872C4FEEE000FFC28A /* NetworkServiceProtocol.swift */,
 				611BBACA2C507DF200FFC28A /* Reuse.swift */,
-				611BBADE2C50B32500FFC28A /* SendCityDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -652,7 +649,6 @@
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
 				611BBAB32C50797400FFC28A /* SectionOfWeatherData.swift in Sources */,
-				611BBADF2C50B32500FFC28A /* SendCityDelegate.swift in Sources */,
 				611BBA822C4FED6B00FFC28A /* WeatherQueryName.swift in Sources */,
 				611BBAA82C5077D900FFC28A /* LocationMapCollectionViewCell.swift in Sources */,
 				611BBABB2C507AE000FFC28A /* DateManager.swift in Sources */,

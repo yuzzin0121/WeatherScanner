@@ -170,7 +170,7 @@ func request<T: Decodable, U: TargetType>(model: T.Type, router: U) -> Single<Re
 ```
 </details>
 <details>
-<summary>ViewModel에 <b>ViewModelType</b>protocol을 채택함으로써 공통된 프로퍼티와 메서드 구성</summary>
+<summary>ViewModel에 <b>ViewModelType</b> protocol을 채택함으로써 공통된 프로퍼티와 메서드 구성</summary>
   
 ```
 import RxSwift
@@ -324,7 +324,7 @@ NetworkMonitorManager.shared.startMonitoring { [weak self] connectionStatus in
 
 - cell과 header를 정의할 수 있는 방법으로는 DiffableDataSource와 RxDataSource라는 2가지 선택지가 존재 <br>
 1. DiffableDataSource: 데이터가 변화할 때 마다 직접 reload해줘야 하는 단점이 존재<br>
-2. RxDataSources를: RxSwift와 통합되어 데이터 변화 시 자동으로 바인딩이 가능 <br>
+2. RxDataSources: RxSwift와 통합되어 데이터 변화 시 자동으로 바인딩 가능 <br>
 -> RxDataSources를 사용하여 구현하기로 결정
 
 - 날씨 화면은 섹션마다 다양한 데이터 타입으로 구성 <br>
@@ -366,12 +366,12 @@ enum SectionOfWeatherData: SectionModelType {
 `문제 상황`<br>
 - API 호출의 결과로 얻은 DTO 객체를 날씨 화면을 구성하는 셀 데이터로 가공해야 하는 상황 <br>
 
-- 가독성 있고 효율적인 데이터 가공하는 방법 학습을 통해 Mapper를 활용기로 결정
+- 가독성 있고 효율적인 데이터 가공하는 방법 학습을 통해 Mapper를 활용하기로 결정
 
 Mapper는 중간 레이어로서 서로 다른 데이터를 변환하는 책임을 갖는 클래스 <br>
 -> 만약 API에 변화가 발생한 경우 Mapper를 변경하여 편리하게 코드를 수정 가능
 
-- 일기예보를 화면에 표현할 데이터로 변환하고자 WeatherEntityMapper를 구현
+- dto를 일기예보 화면에 표현에 필요한 데이터로 변환하고자 WeatherEntityMapper를 구현
 - 매개변수로 dto를 받아 가공하고자 하는 entity를 반환
 
 `결과`<br>

@@ -32,14 +32,18 @@ final class SearchBar: UISearchBar {
             if let leftView = textField.leftView as? UIImageView {
                 leftView.image = leftView.image?.withRenderingMode(.alwaysTemplate)
                 //이미지 틴트컬러 정하기
-                leftView.tintColor = .gray
+                leftView.tintColor = Color.textGray
             }
             //오른쪽 x버튼 이미지넣기
             if let rightView = textField.rightView as? UIImageView {
                 rightView.image = rightView.image?.withRenderingMode(.alwaysTemplate)
                 //이미지 틴트 정하기
-                rightView.tintColor = .gray
+                rightView.tintColor = Color.textGray
             }
+            
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: Color.textGray]
+            textField.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes: attributes)
         }
     }
     

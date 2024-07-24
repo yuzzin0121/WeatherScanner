@@ -10,6 +10,8 @@ import Foundation
 final class DateManager {
     static let shared = DateManager()
     
+    private init() { }
+    
     let dateFormatter = DateFormatter().then { formatter in
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         formatter.timeZone = TimeZone(secondsFromGMT: 0)    // UTC 시간대
@@ -23,10 +25,10 @@ final class DateManager {
     let calendar = Calendar.current
     
     // 5일 동안의 일기예보 반환
-    func getDailyForecastList(_ forecastList: [Forecast]) -> [Forecast] {
+    func getDailyForecastList(_ forecastList: [ForecastDTO]) -> [ForecastDTO] {
         
         let currentDate = Date()
-        var selectedForecasts: [Forecast] = []
+        var selectedForecasts: [ForecastDTO] = []
         var selectedDates = Set<Date>()
         
         // 현재로부터 5일까지의 날짜 Set에 insert

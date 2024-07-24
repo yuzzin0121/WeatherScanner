@@ -9,7 +9,12 @@ import Foundation
 import Alamofire
 import RxSwift
 
+protocol NetworkServiceProtocol: AnyObject {
+    func request<T: Decodable, U: TargetType>(model: T.Type, router: U) -> Single<Result<T, Error>>
+}
+
 final class WeatherNetworkManager: NetworkServiceProtocol {
+
     static let shared = WeatherNetworkManager()
     
     func request<T: Decodable, U: TargetType>(model: T.Type, router: U) -> Single<Result<T, Error>> {

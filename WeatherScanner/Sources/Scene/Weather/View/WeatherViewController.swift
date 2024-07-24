@@ -10,6 +10,9 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
+protocol SendCityDelegate: AnyObject {
+    func sendCity(_ city: City)
+}
 
 final class WeatherViewController: BaseViewController, SendCityDelegate {
     private let mainView = WeatherView()
@@ -148,3 +151,18 @@ extension WeatherViewController {
     }
 }
 
+extension WeatherViewController {
+    enum DetailInfoRow: Int {
+        case humidity
+        case cloud
+        case windSpeed
+        
+        var header: String {
+            switch self {
+            case .humidity: "습도"
+            case .cloud: "구름"
+            case .windSpeed: "바람 속도"
+            }
+        }
+    }
+}

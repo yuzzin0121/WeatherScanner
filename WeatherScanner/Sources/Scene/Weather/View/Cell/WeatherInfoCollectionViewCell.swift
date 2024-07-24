@@ -42,16 +42,16 @@ final class WeatherInfoCollectionViewCell: BaseCollectionViewCell {
             make.verticalEdges.horizontalEdges.equalToSuperview()
         }
         headerLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().inset(6)
+            make.top.leading.equalToSuperview().inset(12)
         }
         valueLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().inset(14)
+            make.leading.equalToSuperview().inset(18)
         }
         
         subValueLabel.snp.makeConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(6)
-            make.bottom.equalToSuperview().inset(6)
+            make.horizontalEdges.equalToSuperview().inset(12)
+            make.bottom.equalToSuperview().inset(12)
         }
     }
     

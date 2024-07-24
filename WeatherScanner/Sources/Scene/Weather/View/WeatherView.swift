@@ -185,7 +185,7 @@ extension WeatherView {
         
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(20)),
+                                               heightDimension: .absolute(30)),
             elementKind: UICollectionView.elementKindSectionHeader,
             alignment: .top
         )
@@ -213,7 +213,7 @@ extension WeatherView {
         
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(20)),
+                                               heightDimension: .absolute(30)),
             elementKind: UICollectionView.elementKindSectionHeader,
             alignment: .top
         )
@@ -230,6 +230,7 @@ extension WeatherView {
                                               heightDimension: .fractionalHeight(1.0))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 6, bottom: 6, trailing: 6)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .fractionalWidth(1.0))
@@ -239,7 +240,7 @@ extension WeatherView {
         
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(20)),
+                                               heightDimension: .absolute(30)),
             elementKind: UICollectionView.elementKindSectionHeader,
             alignment: .top
         )
@@ -250,7 +251,7 @@ extension WeatherView {
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: CellBackgroundReusableView.identifier)
         section.decorationItems = [sectionBackgroundDecoration]
         
-        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 16, trailing: 16)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
         return section
     }
     
@@ -260,7 +261,8 @@ extension WeatherView {
                                               heightDimension: .fractionalHeight(1.0))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 14, trailing: 0)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 20, trailing: 4)
+        
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                heightDimension: .fractionalWidth(0.5))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])

@@ -183,7 +183,7 @@ extension WeatherView {
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader]
         
-        let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: CellBackgroundView.identifier)
+        let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: CellBackgroundReusableView.identifier)
         section.decorationItems = [sectionBackgroundDecoration]
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 14, bottom: 16, trailing: 14)
         return section

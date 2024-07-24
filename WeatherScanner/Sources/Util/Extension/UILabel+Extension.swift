@@ -5,7 +5,7 @@
 //  Created by 조유진 on 7/24/24.
 //
 
-import Foundation
+import UIKit
 
 extension UILabel {
     func design(text: String = "",

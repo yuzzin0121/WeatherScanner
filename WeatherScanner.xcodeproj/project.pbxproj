@@ -64,6 +64,10 @@
 		611BBABD2C507BE900FFC28A /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABC2C507BE900FFC28A /* Double+Extension.swift */; };
 		611BBABF2C507C6A00FFC28A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */; };
 		611BBAC12C507CD500FFC28A /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAC02C507CD500FFC28A /* UIStackView+Extension.swift */; };
+		611BBAC42C507D4900FFC28A /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAC32C507D4900FFC28A /* Differentiator */; };
+		611BBAC62C507D4900FFC28A /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAC52C507D4900FFC28A /* RxDataSources */; };
+		611BBAC92C507D9E00FFC28A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAC82C507D9E00FFC28A /* SnapKit */; };
+		611BBACB2C507DF200FFC28A /* Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBACA2C507DF200FFC28A /* Reuse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +125,7 @@
 		611BBABC2C507BE900FFC28A /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		611BBAC02C507CD500FFC28A /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		611BBACA2C507DF200FFC28A /* Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reuse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +134,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				611BBA782C4FECBF00FFC28A /* Alamofire in Frameworks */,
+				611BBAC92C507D9E00FFC28A /* SnapKit in Frameworks */,
 				611BBA1A2C4FC4AC00FFC28A /* RxSwift in Frameworks */,
 				611BBA182C4FC4AC00FFC28A /* RxCocoa in Frameworks */,
 				611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */,
+				611BBAC62C507D4900FFC28A /* RxDataSources in Frameworks */,
+				611BBAC42C507D4900FFC28A /* Differentiator in Frameworks */,
 				611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +272,7 @@
 				611BBA122C4FC40900FFC28A /* ViewProtocol.swift */,
 				611BBA1B2C4FC5C200FFC28A /* ViewModelType.swift */,
 				611BBA872C4FEEE000FFC28A /* NetworkServiceProtocol.swift */,
+				611BBACA2C507DF200FFC28A /* Reuse.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -502,6 +511,9 @@
 				611BBA5B2C4FDE1000FFC28A /* Lottie */,
 				611BBA5E2C4FDECF00FFC28A /* Then */,
 				611BBA772C4FECBF00FFC28A /* Alamofire */,
+				611BBAC32C507D4900FFC28A /* Differentiator */,
+				611BBAC52C507D4900FFC28A /* RxDataSources */,
+				611BBAC82C507D9E00FFC28A /* SnapKit */,
 			);
 			productName = WeatherScanner;
 			productReference = 611BB98F2C4E89BF00FFC28A /* WeatherScanner.app */;
@@ -536,6 +548,8 @@
 				611BBA5A2C4FDE1000FFC28A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				611BBA5D2C4FDECF00FFC28A /* XCRemoteSwiftPackageReference "Then" */,
 				611BBA762C4FECBF00FFC28A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				611BBAC22C507D4800FFC28A /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				611BBAC72C507D9E00FFC28A /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 611BB9902C4E89BF00FFC28A /* Products */;
 			projectDirPath = "";
@@ -576,6 +590,7 @@
 				611BBA652C4FE4ED00FFC28A /* CityManager.swift in Sources */,
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
 				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
+				611BBACB2C507DF200FFC28A /* Reuse.swift in Sources */,
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,
 				611BBA552C4FDDC600FFC28A /* SplashViewController.swift in Sources */,
 				611BBA942C5074D100FFC28A /* BaseCollectionViewCell.swift in Sources */,
@@ -858,6 +873,22 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		611BBAC22C507D4800FFC28A /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		611BBAC72C507D9E00FFC28A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -885,6 +916,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 611BBA762C4FECBF00FFC28A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		611BBAC32C507D4900FFC28A /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBAC22C507D4800FFC28A /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		611BBAC52C507D4900FFC28A /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBAC22C507D4800FFC28A /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		611BBAC82C507D9E00FFC28A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBAC72C507D9E00FFC28A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

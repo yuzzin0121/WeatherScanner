@@ -62,7 +62,10 @@ final class SearchView: BaseView {
         collectionView.backgroundColor = .clear
         collectionView.register(CityCollectionViewCell.self, forCellWithReuseIdentifier: CityCollectionViewCell.identifier)
         
-        emptyMessageLabel.design(text: "현재 일치하는 도시가 없습니다\n 다시 검색해주세요", textColor: Color.backgroundGray, numberOfLines: 2)
+        emptyMessageLabel.design(text: "현재 일치하는 도시가 없습니다\n 다시 검색해주세요", textColor: Color.backgroundGray, font: .systemFont(ofSize: 16, weight: .semibold), numberOfLines: 2)
+        
+        emptyMessageLabel.setLineSpacing(spacing: 8)
+        emptyMessageLabel.textAlignment = .center
     }
 }
 

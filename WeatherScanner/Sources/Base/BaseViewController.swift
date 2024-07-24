@@ -31,9 +31,14 @@ class BaseViewController: UIViewController {
         
     }
     
-    func showSearchVC() {
-        let searchVC = SearchViewController(viewModel: SearchViewModel())
-        present(searchVC, animated: true)
+    // 에러 팝업창
+    func showAlert(title: String, message: String, actionHandler: (() -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .default) { _ in
+            actionHandler?()
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
     }
     
     @available (*, unavailable)

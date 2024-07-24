@@ -6,40 +6,46 @@
 //
 
 import Foundation
+import RxSwift
 
 final class CityManager {
     static let shared = CityManager()
-    var cityHashList: [String: City] = [:]
+    var cityList: [City] = []
+    
+    // 도시 검색
+    func searchCity(name: String) -> Single<Result<[City], Error>> {
+        return Single<Result<[City], Error>>.create { [weak self] single in
+            guard let self else { return Disposables.create() }
+            let lowercaseName = name.lowercased()
+            var searchedList: [City] = []
+            
+            for city in cityList {
+                if city.name.lowercased().contains(lowercaseName) {
+                    searchedList.append(city)
+                }
+            }
+            single(.success(.success(searchedList)))
+            
+            return Disposables.create()
+        }
+    }
     
     // 첫 날씨화면에 나올 도시 반환
     func getDefaultCity() -> City? {
         let defaultCityName = "Seongnam"
-        if !cityHashList.isEmpty && cityHashList[defaultCityName] != nil {
-            return cityHashList[defaultCityName]
+        if !cityList.isEmpty {
+            for city in cityList {
+                if city.name == defaultCityName {
+                    return city
+                }
+            }
         }
         return nil
     }
     
-    
-    // 해시 테이블 형태로 저장 O(1)
-    func saveToHashTable(completionHandler: ((Bool) -> Void)) {
-        let cityList = getCityList()
-        if !cityList.isEmpty {
-            var cityHashList = [String: City]()
-            
-            for city in cityList {
-                cityHashList[city.name] = city
-            }
-            
-            self.cityHashList = cityHashList
-            completionHandler(true)
-            print("save Success")
-        } else {
-            print("error")
-            completionHandler(false)
-            // TODO: 에러처리
-        }
-        
+    func saveToCityList(completionHandler: ((Bool) -> Void)) {
+        self.cityList = getCityList()
+        completionHandler(true)
     }
     
     // 구조체 배열로 변환

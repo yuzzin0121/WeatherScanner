@@ -34,7 +34,7 @@ final class SplashViewController: UIViewController {
         dispatchGroup.enter()
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let self else { return }
-            CityManager.shared.saveToHashTable { isSuccess in
+            CityManager.shared.saveToCityList { isSuccess in
                 if isSuccess {
                     self.dispatchGroup.leave()
                 } else {

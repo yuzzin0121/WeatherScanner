@@ -38,7 +38,7 @@
 
 ## 👩🏻‍💻 핵심 구현
 <details>
-<summary><b>RxDataSource</b>를 활용해 효율적인 및 유지보수 가능한 뷰 구성</summary>
+<summary><b>RxDataSource</b>를 활용해 유지보수 가능한 뷰 구성</summary>
   
 ```
 dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfWeatherData>(configureCell: { dataSource, collectionView, indexPath, weatherData in

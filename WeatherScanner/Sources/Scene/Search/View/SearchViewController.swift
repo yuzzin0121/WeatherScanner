@@ -27,7 +27,18 @@ final class SearchViewController: BaseViewController {
     }
     
     override func bind() {
+        let input = SearchViewModel.Input(searchText: mainView.searchBar.rx.text.orEmpty.asObservable(),
+                                          searchButtonTap: mainView.searchBar.rx.searchButtonClicked.asObservable())
+        let output = viewModel.transform(input: input)
         
+        output.cityList
+            .drive(mainView.collectionView.rx.items(cellIdentifier: CityCollectionViewCell.identifier, cellType: CityCollectionViewCell.self)) { index, city, cell in
+                print(city)
+                cell.configureCell(city: city)
+            }
+            .disposed(by: disposeBag)
+        
+
     }
 
     override func loadView() {

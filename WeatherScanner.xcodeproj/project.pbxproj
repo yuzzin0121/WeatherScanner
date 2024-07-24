@@ -71,6 +71,7 @@
 		611BBACE2C5086D800FFC28A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBACD2C5086D800FFC28A /* SearchBar.swift */; };
 		611BBAD02C50877600FFC28A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBACF2C50877600FFC28A /* Image.swift */; };
 		611BBAD52C50931700FFC28A /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAD42C50931700FFC28A /* CityCollectionViewCell.swift */; };
+		611BBAD72C509EF800FFC28A /* CityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAD62C509EF800FFC28A /* CityError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		611BBACD2C5086D800FFC28A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		611BBACF2C50877600FFC28A /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		611BBAD42C50931700FFC28A /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		611BBAD62C509EF800FFC28A /* CityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				611BBA832C4FEE5400FFC28A /* WeatherAPIError.swift */,
+				611BBAD62C509EF800FFC28A /* CityError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				611BBA8A2C4FF3E600FFC28A /* FetchWeatherModel.swift in Sources */,
 				611BBA652C4FE4ED00FFC28A /* CityManager.swift in Sources */,
 				611BBA112C4FC3F300FFC28A /* BaseView.swift in Sources */,
+				611BBAD72C509EF800FFC28A /* CityError.swift in Sources */,
 				611BBA282C4FC76F00FFC28A /* SeachView.swift in Sources */,
 				611BBACB2C507DF200FFC28A /* Reuse.swift in Sources */,
 				611BBA1E2C4FC5F800FFC28A /* Color.swift in Sources */,

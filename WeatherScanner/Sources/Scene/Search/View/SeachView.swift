@@ -12,7 +12,7 @@ final class SearchView: BaseView {
     private lazy var visualEffectView = UIVisualEffectView(effect: blurEffect)
     
     let searchBar = SearchBar(placeholder: "도시 이름 검색")
-    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
     
     func setFirstResponder() {
@@ -42,7 +42,10 @@ final class SearchView: BaseView {
     }
     
     override func configureView() {
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .clear
+        collectionView.register(CityCollectionViewCell.self, forCellWithReuseIdentifier: CityCollectionViewCell.identifier)
     }
 }
 
@@ -50,14 +53,15 @@ extension SearchView {
     private func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(50)
+            heightDimension: .absolute(60)
         )
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 16, bottom: 10, trailing: 16)
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalHeight(1.0)
+            heightDimension: .absolute(50)
         )
         
         let group = NSCollectionLayoutGroup.horizontal(

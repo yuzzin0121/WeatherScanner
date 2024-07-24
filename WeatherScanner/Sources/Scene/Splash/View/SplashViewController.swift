@@ -45,14 +45,19 @@ final class SplashViewController: UIViewController {
         
         dispatchGroup.notify(queue: .main) { [weak self] in
             guard let self else { return }
-            showWeatherVC()
+            self.showWeatherVC()
         }
     }
     
     private func showWeatherVC() {
         let weatherVC = WeatherViewController(viewModel: WeatherViewModel())
+        weatherVC.modalTransitionStyle = .crossDissolve
         weatherVC.modalPresentationStyle = .fullScreen
-        present(weatherVC, animated: false)
+//        present(weatherVC, animated: false)
+        UIView.transition(with: self.view.window!, duration: 0.5, options: .transitionCrossDissolve, animations: { [weak self] in
+            guard let self else { return }
+            self.present(weatherVC, animated: false, completion: nil)
+        }, completion: nil)
     }
     
     private func configureHierarchy() {

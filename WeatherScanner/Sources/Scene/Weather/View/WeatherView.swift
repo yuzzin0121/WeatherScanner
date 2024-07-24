@@ -16,9 +16,10 @@ final class WeatherView: BaseView {
 
     func setWeatherBackgroundImage(weatherString: String) {
         print(weatherString)
-        UIView.animate(withDuration: 1.0) { [weak self] in
+        weatherBackgroundImageView.image = UIImage(named: weatherString)
+        UIView.animate(withDuration: 0.5) { [weak self] in
             guard let self else { return }
-            weatherBackgroundImageView.image = UIImage(named: weatherString)
+            weatherBackgroundImageView.alpha = 1
         }
     }
     
@@ -60,6 +61,7 @@ final class WeatherView: BaseView {
         
         searchBar.isUserInteractionEnabled = false
         tapButton.backgroundColor = .clear
+        weatherBackgroundImageView.alpha = 0
         
         weatherCollectionView.backgroundColor = .clear
         weatherCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

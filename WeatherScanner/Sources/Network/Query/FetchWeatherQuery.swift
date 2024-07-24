@@ -10,13 +10,13 @@ import Foundation
 struct FetchWeatherQuery {
     let lat: String
     let lon: String
-    let cnt: String
+    let cnt: String?
     let lang: String
     
-    init(lat: Double, lon: Double, cnt: Int = 7, lang: String = Language.korea.rawValue) {
+    init(lat: Double, lon: Double, cnt: String? = nil, lang: String = Language.korea.rawValue) {
         self.lat = String(lat)
         self.lon = String(lon)
-        self.cnt = String(cnt)
+        self.cnt = cnt
         self.lang = lang
     }
 }

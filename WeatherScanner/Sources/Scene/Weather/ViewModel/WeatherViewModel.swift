@@ -15,6 +15,7 @@ final class WeatherViewModel: ViewModelType {
     struct Input {
         let viewDidLoadTrigger: Observable<Void>
         let searchBarTapped: Observable<Void>
+        let fetchWeatherOfCity: Observable<City>
     }
     
     struct Output {
@@ -31,6 +32,7 @@ final class WeatherViewModel: ViewModelType {
         let errorString = PublishRelay<String>()
         
         input.searchBarTapped
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .bind { _ in
                 searchButtonTapped.accept(())
             }
@@ -43,6 +45,28 @@ final class WeatherViewModel: ViewModelType {
             }
             .flatMap { city in
                 guard let city else { return Single<Result<FetchWeatherModel, Error>>.never() }
+                return WeatherNetworkManager.shared.request(model: FetchWeatherModel.self,
+                                                             router: WeatherRouter.fetchWeather(
+                                                                fetchWeatherQuery: FetchWeatherQuery(
+                                                                    lat: city.coord.lat,
+                                                                    lon: city.coord.lon)
+                                                             )
+                )
+            }
+            .bind(with: self) { owner, result in
+                switch result {
+                case .success(let fetchWeatherModel):
+                    let sectionDataList = owner.getSectionWeatherDataList(weatherModel: fetchWeatherModel)
+                    sectionWeatherDataList.onNext(sectionDataList)
+                    currentWeather.accept(fetchWeatherModel.list[0].weather[0].main)
+                case .failure(let error):
+                    errorString.accept(error.localizedDescription)
+                }
+            }
+            .disposed(by: disposeBag)
+        
+        input.fetchWeatherOfCity
+            .flatMap { city in
                 return WeatherNetworkManager.shared.request(model: FetchWeatherModel.self,
                                                              router: WeatherRouter.fetchWeather(
                                                                 fetchWeatherQuery: FetchWeatherQuery(

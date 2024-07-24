@@ -16,6 +16,7 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
     
     private let viewModel: WeatherViewModel
     private var dataSource: RxCollectionViewSectionedReloadDataSource<SectionOfWeatherData>!
+    private let fetchWeatherOfCity = PublishSubject<City>()
     
     init(viewModel: WeatherViewModel) {
         self.viewModel = viewModel
@@ -31,7 +32,8 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
         configureCollectionViewDataSource()
         
         let input = WeatherViewModel.Input(viewDidLoadTrigger: Observable.just(()),
-                                           searchBarTapped: mainView.tapButton.rx.tap.asObservable())
+                                           searchBarTapped: mainView.tapButton.rx.tap.asObservable(),
+                                           fetchWeatherOfCity: fetchWeatherOfCity.asObservable())
         let output = viewModel.transform(input: input)
         
         output.sectionWeatherDataList
@@ -64,6 +66,7 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
     
     func sendCity(_ city: City) {
         print(city)
+        fetchWeatherOfCity.onNext(city)
     }
 }
 

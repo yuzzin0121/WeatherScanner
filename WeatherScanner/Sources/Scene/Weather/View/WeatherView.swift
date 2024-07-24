@@ -18,7 +18,6 @@ final class WeatherView: BaseView {
     lazy var weatherCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
 
     func setWeatherBackgroundImage(weatherString: String) {
-        print(weatherString)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
             guard let self else { return }
             activityIndicatorView.stopAnimating()

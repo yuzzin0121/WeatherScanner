@@ -18,6 +18,11 @@ final class CityManager {
     func searchCity(name: String) -> Single<Result<[City], Error>> {
         return Single<Result<[City], Error>>.create { [weak self] single in
             guard let self else { return Disposables.create() }
+            
+            if name.isEmpty {
+                single(.success(.success(cityList)))
+            }
+            
             let lowercaseName = name.lowercased()
             var searchedList: [City] = []
             
@@ -26,6 +31,7 @@ final class CityManager {
                     searchedList.append(city)
                 }
             }
+        
             single(.success(.success(searchedList)))
             
             return Disposables.create()
@@ -45,16 +51,18 @@ final class CityManager {
         return nil
     }
     
+    func getCityList() -> [City] {
+        return cityList
+    }
+    
     func saveToCityList(completionHandler: ((Bool) -> Void)) {
-        self.cityList = getCityList()
+        self.cityList = decodeToCityList()
         completionHandler(true)
     }
     
     // 구조체 배열로 변환
-    func getCityList() -> [City] {
-        print(#function)
+    private func decodeToCityList() -> [City] {
         guard let url = getJsonUrl() else {
-            // 에러 처리 필요
             return []
         }
         

@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 struct WeatherEntityMapper {
-    func toCurrentWeatherEntity(_ dto: Forecast) -> CurrentWeather {
+    func toCurrentWeatherEntity(_ dto: ForecastDTO) -> CurrentWeather {
         let entity = CurrentWeather(
             temp: Int(dto.main.temp.kelvinToCelsius()),
             weather: dto.weather[0].description,
@@ -18,7 +18,7 @@ struct WeatherEntityMapper {
         return entity
     }
     
-    func toHourlyWeatherEntity(_ dto: Forecast) -> HourlyWeather {
+    func toHourlyWeatherEntity(_ dto: ForecastDTO) -> HourlyWeather {
         let entity = HourlyWeather(
             time: DateManager.shared.convertToHour(dto.dtTxt),
             icon: dto.weather[0].icon,
@@ -27,7 +27,7 @@ struct WeatherEntityMapper {
         return entity
     }
     
-    func toDailyWeatherEntity(_ dto: Forecast) -> DailyWeather {
+    func toDailyWeatherEntity(_ dto: ForecastDTO) -> DailyWeather {
         let entity = DailyWeather(
             dt: DateManager.shared.convertDayOfWeek(dto.dtTxt),
             icon: dto.weather[0].icon,
@@ -45,12 +45,12 @@ struct WeatherEntityMapper {
         return entity
     }
     
-    func toHumidityWeatherEntity(_ dto: Forecast) -> Double {
+    func toHumidityWeatherEntity(_ dto: ForecastDTO) -> Double {
         let entity = Double(dto.main.humidity)
         return entity
     }
     
-    func toCloudWeatherEntity(_ dto: Forecast) -> Double {
+    func toCloudWeatherEntity(_ dto: ForecastDTO) -> Double {
         let entity = Double(dto.clouds.all)
         return entity
     }

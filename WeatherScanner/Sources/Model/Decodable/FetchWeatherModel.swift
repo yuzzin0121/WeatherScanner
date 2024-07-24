@@ -11,11 +11,11 @@ struct FetchWeatherModel: Decodable {
     let cod: String
     let message: Int
     let cnt: Int
-    let list: [Forecast]    // 일기예보 리스트
+    let list: [ForecastDTO]    // 일기예보 리스트
     let city: City
 }
 
-struct Forecast: Decodable {
+struct ForecastDTO: Decodable {
     let main: Main
     let weather: [Weather]
     let clouds: Clouds

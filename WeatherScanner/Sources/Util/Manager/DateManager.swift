@@ -23,10 +23,10 @@ final class DateManager {
     let calendar = Calendar.current
     
     // 5일 동안의 일기예보 반환
-    func getDailyForecastList(_ forecastList: [Forecast]) -> [Forecast] {
+    func getDailyForecastList(_ forecastList: [ForecastDTO]) -> [ForecastDTO] {
         
         let currentDate = Date()
-        var selectedForecasts: [Forecast] = []
+        var selectedForecasts: [ForecastDTO] = []
         var selectedDates = Set<Date>()
         
         // 현재로부터 5일까지의 날짜 Set에 insert

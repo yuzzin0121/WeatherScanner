@@ -23,8 +23,10 @@ final class WeatherInfoCollectionViewCell: BaseCollectionViewCell {
         case 1:
             valueLabel.text = "\(Int(value))%"
         case 2:
-            valueLabel.text = "\(value)m/s"
-            subValueLabel.text = "강풍: \(infoValue[1])m/s"
+            let valueNumber = Double.formattedNumberString(value) 
+            let subValue = Double.formattedNumberString(infoValue[1])
+            valueLabel.text = "\(valueNumber ?? "")m/s"
+            subValueLabel.text = "강풍: \(subValue ?? "")m/s"
         default:
             break
         }

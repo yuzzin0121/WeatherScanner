@@ -44,20 +44,5 @@ struct WeatherEntityMapper {
         
         return entity
     }
-    
-    func toHumidityWeatherEntity(_ dto: ForecastDTO) -> Double {
-        let entity = Double(dto.main.humidity)
-        return entity
-    }
-    
-    func toCloudWeatherEntity(_ dto: ForecastDTO) -> Double {
-        let entity = Double(dto.clouds.all)
-        return entity
-    }
-    
-    func toWindWeatherEntity(dto: Wind) -> [Double] {
-        let entity = [dto.speed, dto.gust]
-        return entity
-    }
 }
 

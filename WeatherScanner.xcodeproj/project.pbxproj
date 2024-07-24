@@ -62,6 +62,7 @@
 		611BBAB92C507A7F00FFC28A /* WeatherEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBAB82C507A7F00FFC28A /* WeatherEntityMapper.swift */; };
 		611BBABB2C507AE000FFC28A /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABA2C507AE000FFC28A /* DateManager.swift */; };
 		611BBABD2C507BE900FFC28A /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABC2C507BE900FFC28A /* Double+Extension.swift */; };
+		611BBABF2C507C6A00FFC28A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		611BBAB82C507A7F00FFC28A /* WeatherEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntityMapper.swift; sourceTree = "<group>"; };
 		611BBABA2C507AE000FFC28A /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		611BBABC2C507BE900FFC28A /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				611BBABC2C507BE900FFC28A /* Double+Extension.swift */,
+				611BBABE2C507C6A00FFC28A /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				611BBA882C4FEEE000FFC28A /* NetworkServiceProtocol.swift in Sources */,
 				611BBA262C4FC64F00FFC28A /* WeatherViewModel.swift in Sources */,
 				611BB9932C4E89BF00FFC28A /* AppDelegate.swift in Sources */,
+				611BBABF2C507C6A00FFC28A /* UILabel+Extension.swift in Sources */,
 				611BBAB32C50797400FFC28A /* SectionOfWeatherData.swift in Sources */,
 				611BBA822C4FED6B00FFC28A /* WeatherQueryName.swift in Sources */,
 				611BBAA82C5077D900FFC28A /* LocationMapCollectionViewCell.swift in Sources */,

@@ -50,6 +50,12 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
                 owner.showSearchVC()
             }
             .disposed(by: disposeBag)
+        
+        output.errorMessage
+            .drive(with: self) { owner, errorMessage in
+                owner.showAlert(title: "일기예보 탐색", message: errorMessage, actionHandler: nil)
+            }
+            .disposed(by: disposeBag)
     }
     
     // 검색 화면 present, delegate 설정

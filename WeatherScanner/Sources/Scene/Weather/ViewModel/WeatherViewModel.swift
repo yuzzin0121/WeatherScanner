@@ -22,14 +22,14 @@ final class WeatherViewModel: ViewModelType {
         let searchButtonTapped: Driver<Void>
         let sectionWeatherDataList: PublishSubject<[SectionOfWeatherData]>
         let currentWeather: Driver<String>
-        let errorString: Driver<String>
+        let errorMessage: Driver<String>
     }
     
     func transform(input: Input) -> Output {
         let searchButtonTapped = PublishRelay<Void>()
         let sectionWeatherDataList = PublishSubject<[SectionOfWeatherData]>()
         let currentWeather = PublishRelay<String>()
-        let errorString = PublishRelay<String>()
+        let errorMessage = PublishRelay<String>()
         
         input.searchBarTapped
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
@@ -60,7 +60,7 @@ final class WeatherViewModel: ViewModelType {
                     sectionWeatherDataList.onNext(sectionDataList)
                     currentWeather.accept(fetchWeatherModel.list[0].weather[0].main)
                 case .failure(let error):
-                    errorString.accept(error.localizedDescription)
+                    errorMessage.accept(error.localizedDescription)
                 }
             }
             .disposed(by: disposeBag)
@@ -82,7 +82,7 @@ final class WeatherViewModel: ViewModelType {
                     sectionWeatherDataList.onNext(sectionDataList)
                     currentWeather.accept(fetchWeatherModel.list[0].weather[0].main)
                 case .failure(let error):
-                    errorString.accept(error.localizedDescription)
+                    errorMessage.accept(error.localizedDescription)
                 }
             }
             .disposed(by: disposeBag)
@@ -90,7 +90,7 @@ final class WeatherViewModel: ViewModelType {
         return Output(searchButtonTapped: searchButtonTapped.asDriver(onErrorDriveWith: .empty()),
                       sectionWeatherDataList: sectionWeatherDataList,
                       currentWeather: currentWeather.asDriver(onErrorDriveWith: .empty()),
-                      errorString: errorString.asDriver(onErrorDriveWith: .empty()))
+                      errorMessage: errorMessage.asDriver(onErrorDriveWith: .empty()))
     }
     
     private func getSectionWeatherDataList(weatherModel: FetchWeatherModel) -> [SectionOfWeatherData] {

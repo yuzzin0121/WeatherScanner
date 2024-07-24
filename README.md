@@ -1,5 +1,5 @@
 # WeatherScanner
-> iOS 채용 사전 과제 - Open Weather를 이용한 날씨 앱
+> iOS 채용 사전 과제 - `Open Weather API`를 이용한 **날씨 앱**
 <img src=https://github.com/user-attachments/assets/625b0e27-9d43-4775-a296-a844836f2cba width=650>
 
 ## 🛠️ 프로젝트 개발 및 환경

@@ -10,6 +10,8 @@ import Foundation
 final class DateManager {
     static let shared = DateManager()
     
+    private init() { }
+    
     let dateFormatter = DateFormatter().then { formatter in
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         formatter.timeZone = TimeZone(secondsFromGMT: 0)    // UTC 시간대

@@ -14,6 +14,11 @@ final class SearchView: BaseView {
     let searchBar = SearchBar(placeholder: "도시 이름 검색")
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
+    
+    func setFirstResponder() {
+        searchBar.becomeFirstResponder()
+    }
+    
     override func configureHierarchy() {
         addSubview(visualEffectView)
         addSubview(searchBar)

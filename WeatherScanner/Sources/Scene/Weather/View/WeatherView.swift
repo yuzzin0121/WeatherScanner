@@ -75,7 +75,7 @@ final class WeatherView: BaseView {
         weatherCollectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom).offset(16)
             make.bottom.equalTo(safeAreaLayoutGuide)
-            make.horizontalEdges.equalToSuperview()
+            make.horizontalEdges.equalToSuperview().inset(16)
         }
         
         activityIndicatorView.snp.makeConstraints { make in
@@ -132,8 +132,6 @@ extension WeatherView {
                 case .humidity, .clouds, .windSpeed:
                     section = weatherInfoLayout()
                 }
-                
-                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 16, trailing: 16)
         
                 return section
             } else {
@@ -165,6 +163,7 @@ extension WeatherView {
         sectionHeader.pinToVisibleBounds = true
         sectionHeader.zIndex = 3
         section.boundarySupplementaryItems = [sectionHeader]
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         return section
     }
     
@@ -193,7 +192,7 @@ extension WeatherView {
         sectionHeader.pinToVisibleBounds = true
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader]
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         return section
     }
     
@@ -221,7 +220,7 @@ extension WeatherView {
         sectionHeader.pinToVisibleBounds = true
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader]
-    
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         return section
     }
     
@@ -250,6 +249,8 @@ extension WeatherView {
         
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: CellBackgroundReusableView.identifier)
         section.decorationItems = [sectionBackgroundDecoration]
+        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 16, trailing: 16)
         return section
     }
     
@@ -266,7 +267,7 @@ extension WeatherView {
         group.interItemSpacing = .fixed(14)
         
         let section = NSCollectionLayoutSection(group: group)
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
         return section
     }
 }

@@ -110,19 +110,36 @@ final class WeatherViewModel: ViewModelType {
         let locationCoor: [SectionOfWeatherData.Row] = [
             .locationData(location: [weatherEntityMapper.toCLLocationCoordinate2DEntity(weatherModel.city)])
         ]
-    
-        let detailInfoList: [SectionOfWeatherData.Row] = [
-            .detailInfoData(detailInfo: [weatherEntityMapper.toHumidityWeatherEntity(forecast)]),
-            .detailInfoData(detailInfo: [weatherEntityMapper.toCloudWeatherEntity(forecast)]),
-            .detailInfoData(detailInfo: weatherEntityMapper.toWindWeatherEntity(dto: forecast.wind))
-        ]
         
-        list.forEach { forecast in
-            if DateManager.shared.isHoulryDate(forecast.dtTxt) {
-                let data: SectionOfWeatherData.Row = .hourlyWeatherData(hourlyData: weatherEntityMapper.toHourlyWeatherEntity(forecast))
+        let listCount: Double = Double(list.count)
+        
+        var humiditySum = 0.0
+        var cloudSum = 0.0
+        var windSpeedSum = 0.0
+        var gustSum = 0.0
+        
+        list.forEach { foreCastDto in
+            if DateManager.shared.isHoulryDate(foreCastDto.dtTxt) {
+                let data: SectionOfWeatherData.Row = .hourlyWeatherData(hourlyData: weatherEntityMapper.toHourlyWeatherEntity(foreCastDto))
                 houlyWeatherList.append(data)
             }
+            
+            humiditySum += Double(foreCastDto.main.humidity)
+            cloudSum += Double(foreCastDto.clouds.all)
+            windSpeedSum += foreCastDto.wind.speed
+            gustSum += foreCastDto.wind.gust
         }
+        
+        let humidityAvg = humiditySum / listCount
+        let cloudAvg = cloudSum / listCount
+        let windSpeedAvg = windSpeedSum / listCount
+        let gustAvg = gustSum / listCount
+        
+        let detailInfoList: [SectionOfWeatherData.Row] = [
+            .detailInfoData(detailInfo: [humidityAvg]),
+            .detailInfoData(detailInfo: [cloudAvg]),
+            .detailInfoData(detailInfo: [windSpeedAvg, gustAvg])
+        ]
         
         let sectionOfWeatherDataList: [SectionOfWeatherData] = [
             .currentWeatherSection(header: weatherModel.city.name, items: [.currentWeatherData(currentWeather: currentWeather)]),
@@ -133,6 +150,7 @@ final class WeatherViewModel: ViewModelType {
         ]
         return sectionOfWeatherDataList
     }
+    
 }
 
 

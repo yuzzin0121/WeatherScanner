@@ -36,7 +36,7 @@
 
 
 
-## 👩🏻‍💻 고려사항
+## 👩🏻‍💻 핵심 구현
 <details>
 <summary><b>RxDataSource</b>를 활용해 효율적인 및 유지보수 가능한 뷰 구성</summary>
   
@@ -316,11 +316,96 @@ NetworkMonitorManager.shared.startMonitoring { [weak self] connectionStatus in
 <Br><br>
 
 
-## 🔥 트러블슈팅
-### 1️⃣ 셀마다 다양한 데이터 타입을 가지는 상황에서 RxDataSource 연동 방법에 대한 고민
+## 🔥 트러블슈팅 및 고려사항
+### 1️⃣ 셀마다 다양한 데이터 타입을 가지는 상황에서 전체 스크롤 가능한 뷰 구현 방법에 대한 고민
+`문제 상황`<br>
+- 날씨 화면: 다양한 데이터를 나타내는 레이아웃으로 구성됨, 전체 스크롤이 가능 <br>
+- 유지보수성이 좋은 CompositionalLayout을 사용하되, 각 데이터 당 제목(ex: 시간별 일기예보 / 5일간의 일기예보)가 존재하기 때문에 header가 필요한 뷰 구조를 가지는 상황 <br><br>
+
+- cell과 header를 정의할 수 있는 방법으로는 DiffableDataSource와 RxDataSource라는 2가지 선택지가 존재 <br>
+1. DiffableDataSource: 데이터가 변화할 때 마다 직접 reload해줘야 하는 단점이 존재<br>
+2. RxDataSources를: RxSwift와 통합되어 데이터 변화 시 자동으로 바인딩이 가능 <br>
+-> RxDataSources를 사용하여 구현하기로 결정
+
+- 날씨 화면은 섹션마다 다양한 데이터 타입으로 구성 <br>
+- 따라서 SectionModelType을 채택한 SectionData를 정의할 때 item에 들어갈 데이터를 Row(enum)으로 정의함으로써 서로 다른데이터가 섹션을 구성할 수 있도록 함<br>
+-> dataSource[indexPath] 및 dataSource.sectionModels[indexPath.section]를 통해 셀 정의
+```
+enum SectionOfWeatherData: SectionModelType {
+    typealias ITEM = Row
+    
+    case currentWeatherSection(header: String, items: [Row])
+    case hourlyWeatherSection(header: String, items: [Row])
+    case fiveDaysWeatherSection(header: String, items: [Row])
+    case locationMapSection(header: String, items: [Row])
+    case detailInfoSection(header: String, items: [Row])
+    
+    enum Row {
+        case currentWeatherData(currentWeather: CurrentWeather)
+        case hourlyWeatherData(hourlyData: HourlyWeather)
+        case dailyWeatherData(dailyData: DailyWeather)
+        case locationData(location: [CLLocationCoordinate2D])
+        case detailInfoData(detailInfo: [Double])
+    }
+    
+    var items: [Row] {
+    ...
+}
+```
+
+`결과`<br>
+|RxDataSource 구현 화면|
+|------|
+|<img src=https://github.com/user-attachments/assets/10ea3ea9-9ffd-49e7-8344-923677f020f3 width=220>|
+
 
 
 <br><br>
+
+### 2️⃣ API requset로 응답받은 response를 통해 여러 개의 다른 데이터 타입으로 가공하는 방법에 대한 고민
+`문제 상황`<br>
+- API 호출의 결과로 얻은 DTO 객체를 날씨 화면을 구성하는 셀 데이터로 가공해야 하는 상황 <br>
+
+- 가독성 있고 효율적인 데이터 가공하는 방법 학습을 통해 Mapper를 활용기로 결정
+
+Mapper는 중간 레이어로서 서로 다른 데이터를 변환하는 책임을 갖는 클래스 <br>
+-> 만약 API에 변화가 발생한 경우 Mapper를 변경하여 편리하게 코드를 수정 가능
+
+- 일기예보를 화면에 표현할 데이터로 변환하고자 WeatherEntityMapper를 구현
+- 매개변수로 dto를 받아 가공하고자 하는 entity를 반환
+
+`결과`<br>
+**코드의 가독성과 유지보수성 향상**
+
+```
+struct WeatherEntityMapper {
+    // CurrentWeather로 변환
+    func toCurrentWeatherEntity(_ dto: ForecastDTO) -> CurrentWeather {
+        let entity = CurrentWeather(
+            temp: Int(dto.main.temp.kelvinToCelsius()),
+            weather: dto.weather[0].description,
+            tempMin: Int(dto.main.tempMin.kelvinToCelsius()),
+            tempMax: Int(dto.main.tempMax.kelvinToCelsius()))
+        return entity
+    }
+
+    // HourlyWeather로 변환
+    func toHourlyWeatherEntity(_ dto: ForecastDTO) -> HourlyWeather {
+        let entity = HourlyWeather(
+            time: DateManager.shared.convertToHour(dto.dtTxt),
+            icon: dto.weather[0].icon,
+            temp: Int(dto.main.temp.kelvinToCelsius()))
+        
+        return entity
+    }
+    ...
+}
+
+```
+
+
+
+
 ## 📂 폴더링 구조
 ```
 WeatherScanner

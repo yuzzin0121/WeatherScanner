@@ -87,7 +87,7 @@ final class WeatherViewModel: ViewModelType {
             }
             .disposed(by: disposeBag)
         
-        return Output(searchButtonTapped: searchButtonTapped.asDriver(onErrorDriveWith: .empty()), 
+        return Output(searchButtonTapped: searchButtonTapped.asDriver(onErrorDriveWith: .empty()),
                       sectionWeatherDataList: sectionWeatherDataList,
                       currentWeather: currentWeather.asDriver(onErrorDriveWith: .empty()),
                       errorString: errorString.asDriver(onErrorDriveWith: .empty()))

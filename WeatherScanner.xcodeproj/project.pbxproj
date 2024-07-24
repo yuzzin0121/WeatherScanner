@@ -73,6 +73,8 @@
 		611BBADB2C50B19D00FFC28A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBADA2C50B19D00FFC28A /* UILabel+Extension.swift */; };
 		611BBADD2C50B1A400FFC28A /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBADC2C50B1A400FFC28A /* UIStackView+Extension.swift */; };
 		611BBADF2C50B32500FFC28A /* SendCityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611BBADE2C50B32500FFC28A /* SendCityDelegate.swift */; };
+		611BBAE52C50C3F100FFC28A /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAE42C50C3F100FFC28A /* NVActivityIndicatorView */; };
+		611BBAE72C50C3F100FFC28A /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 611BBAE62C50C3F100FFC28A /* NVActivityIndicatorViewExtended */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,12 +147,14 @@
 			files = (
 				611BBA782C4FECBF00FFC28A /* Alamofire in Frameworks */,
 				611BBAC92C507D9E00FFC28A /* SnapKit in Frameworks */,
+				611BBAE52C50C3F100FFC28A /* NVActivityIndicatorView in Frameworks */,
 				611BBA1A2C4FC4AC00FFC28A /* RxSwift in Frameworks */,
 				611BBA182C4FC4AC00FFC28A /* RxCocoa in Frameworks */,
 				611BBA5C2C4FDE1000FFC28A /* Lottie in Frameworks */,
 				611BBAC62C507D4900FFC28A /* RxDataSources in Frameworks */,
 				611BBAC42C507D4900FFC28A /* Differentiator in Frameworks */,
 				611BBA5F2C4FDECF00FFC28A /* Then in Frameworks */,
+				611BBAE72C50C3F100FFC28A /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +549,8 @@
 				611BBAC32C507D4900FFC28A /* Differentiator */,
 				611BBAC52C507D4900FFC28A /* RxDataSources */,
 				611BBAC82C507D9E00FFC28A /* SnapKit */,
+				611BBAE42C50C3F100FFC28A /* NVActivityIndicatorView */,
+				611BBAE62C50C3F100FFC28A /* NVActivityIndicatorViewExtended */,
 			);
 			productName = WeatherScanner;
 			productReference = 611BB98F2C4E89BF00FFC28A /* WeatherScanner.app */;
@@ -581,6 +587,7 @@
 				611BBA762C4FECBF00FFC28A /* XCRemoteSwiftPackageReference "Alamofire" */,
 				611BBAC22C507D4800FFC28A /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				611BBAC72C507D9E00FFC28A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				611BBAE32C50C3F100FFC28A /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 611BB9902C4E89BF00FFC28A /* Products */;
 			projectDirPath = "";
@@ -925,6 +932,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		611BBAE32C50C3F100FFC28A /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -967,6 +982,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 611BBAC72C507D9E00FFC28A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		611BBAE42C50C3F100FFC28A /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBAE32C50C3F100FFC28A /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		611BBAE62C50C3F100FFC28A /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611BBAE32C50C3F100FFC28A /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

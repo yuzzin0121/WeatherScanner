@@ -25,7 +25,7 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mainView.startLoading()
     }
     
     override func bind() {
@@ -66,6 +66,7 @@ final class WeatherViewController: BaseViewController, SendCityDelegate {
     
     func sendCity(_ city: City) {
         print(city)
+        mainView.startLoading()
         fetchWeatherOfCity.onNext(city)
     }
 }

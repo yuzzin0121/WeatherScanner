@@ -67,6 +67,7 @@ final class SearchViewController: BaseViewController {
                 owner.dismiss(animated: true)
             }
             .disposed(by: disposeBag)
+        
     }
     
     override func loadView() {

@@ -6,21 +6,44 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 final class WeatherView: BaseView {
     let searchBar = SearchBar(placeholder: "도시 검색")
     let tapButton = UIButton()
+    
+    let activityIndicatorView = NVActivityIndicatorView(frame: .zero, type: .orbit, color: .systemYellow)
     
     private let weatherBackgroundImageView = UIImageView()
     lazy var weatherCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
 
     func setWeatherBackgroundImage(weatherString: String) {
         print(weatherString)
-        weatherBackgroundImageView.image = UIImage(named: weatherString)
-        UIView.animate(withDuration: 0.5) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
             guard let self else { return }
-            weatherBackgroundImageView.alpha = 1
+            activityIndicatorView.stopAnimating()
+            
+            weatherBackgroundImageView.image = UIImage(named: weatherString)
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                guard let self else { return }
+                setAlphaZero(false)
+            }
         }
+    }
+    
+    func startLoading() {
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let self else { return }
+            setAlphaZero(true)
+        }
+        
+        activityIndicatorView.startAnimating()
+    }
+    
+    private func setAlphaZero(_ isZero: Bool) {
+        searchBar.alpha = isZero ? 0 : 1
+        weatherBackgroundImageView.alpha = isZero ? 0 : 1
+        weatherCollectionView.alpha = isZero ? 0 : 1
     }
     
     override func configureHierarchy() {
@@ -28,6 +51,7 @@ final class WeatherView: BaseView {
         addSubview(searchBar)
         addSubview(tapButton)
         addSubview(weatherCollectionView)
+        addSubview(activityIndicatorView)
     }
     
     override func configureLayout() {
@@ -53,6 +77,11 @@ final class WeatherView: BaseView {
             make.bottom.equalTo(safeAreaLayoutGuide)
             make.horizontalEdges.equalToSuperview()
         }
+        
+        activityIndicatorView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(80)
+        }
     }
     
     override func configureView() {
@@ -61,8 +90,10 @@ final class WeatherView: BaseView {
         
         searchBar.isUserInteractionEnabled = false
         tapButton.backgroundColor = .clear
+        searchBar.alpha = 0
         weatherBackgroundImageView.alpha = 0
         
+        weatherCollectionView.alpha = 0
         weatherCollectionView.backgroundColor = .clear
         weatherCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         weatherCollectionView.showsVerticalScrollIndicator = false

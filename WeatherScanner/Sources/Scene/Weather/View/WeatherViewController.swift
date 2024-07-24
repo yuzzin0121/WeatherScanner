@@ -38,7 +38,7 @@ final class WeatherViewController: BaseViewController {
         
         output.currentWeather
             .drive(with: self) { owner, weatherString in
-               
+                owner.mainView.setWeatherBackgroundImage(weatherString: weatherString)
             }
             .disposed(by: disposeBag)
     }

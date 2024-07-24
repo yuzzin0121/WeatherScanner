@@ -8,16 +8,39 @@
 import UIKit
 
 final class WeatherView: BaseView {
+    private let searchBar = SearchBar(placeholder: "도시 검색")
+    private let weatherBackgroundImageView = UIImageView()
     lazy var weatherCollectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
 
+    func setWeatherBackgroundImage(weatherString: String) {
+        print(weatherString)
+        UIView.animate(withDuration: 1.0) { [weak self] in
+            guard let self else { return }
+            weatherBackgroundImageView.image = UIImage(named: weatherString)
+        }
+    }
     
     override func configureHierarchy() {
+        addSubview(weatherBackgroundImageView)
+        addSubview(searchBar)
         addSubview(weatherCollectionView)
     }
     
     override func configureLayout() {
+        weatherBackgroundImageView.snp.makeConstraints { make in
+            make.verticalEdges.equalToSuperview()
+            make.horizontalEdges.equalToSuperview()
+        }
+        
+        searchBar.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(20)
+            make.top.equalTo(safeAreaLayoutGuide).offset(12)
+            make.height.equalTo(50)
+        }
+        
         weatherCollectionView.snp.makeConstraints { make in
-            make.verticalEdges.equalTo(safeAreaLayoutGuide)
+            make.top.equalTo(searchBar.snp.bottom).offset(16)
+            make.bottom.equalTo(safeAreaLayoutGuide)
             make.horizontalEdges.equalToSuperview()
         }
     }
@@ -25,6 +48,7 @@ final class WeatherView: BaseView {
     override func configureView() {
         super.configureView()
         backgroundColor = Color.backgroundBlue
+        searchBar.isUserInteractionEnabled = false
         
         weatherCollectionView.backgroundColor = .clear
         weatherCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -65,7 +89,7 @@ extension WeatherView {
                     section = weatherInfoLayout()
                 }
                 
-                section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 16, trailing: 16)
         
                 return section
             } else {
@@ -103,7 +127,7 @@ extension WeatherView {
     @discardableResult
     private func hourlyWeatherLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(98),
-                                              heightDimension: .absolute(110))
+                                              heightDimension: .absolute(114))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 12)
@@ -126,8 +150,6 @@ extension WeatherView {
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader]
         
-        
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 14, bottom: 16, trailing: 14)
         return section
     }
     
@@ -155,8 +177,7 @@ extension WeatherView {
         sectionHeader.pinToVisibleBounds = true
         sectionHeader.zIndex = 2
         section.boundarySupplementaryItems = [sectionHeader]
-        
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 14, bottom: 16, trailing: 14)
+    
         return section
     }
     
@@ -185,7 +206,6 @@ extension WeatherView {
         
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: CellBackgroundReusableView.identifier)
         section.decorationItems = [sectionBackgroundDecoration]
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 14, bottom: 16, trailing: 14)
         return section
     }
     
@@ -203,7 +223,6 @@ extension WeatherView {
         
         let section = NSCollectionLayoutSection(group: group)
         
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 14, bottom: 16, trailing: 14)
         return section
     }
 }

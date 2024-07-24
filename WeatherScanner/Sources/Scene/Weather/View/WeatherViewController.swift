@@ -10,6 +10,9 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
+protocol SendCityDelegate: AnyObject {
+    func sendCity(_ city: City)
+}
 
 final class WeatherViewController: BaseViewController, SendCityDelegate {
     private let mainView = WeatherView()
@@ -162,9 +165,4 @@ extension WeatherViewController {
             }
         }
     }
-    
-    protocol SendCityDelegate: AnyObject {
-        func sendCity(_ city: City)
-    }
-
 }

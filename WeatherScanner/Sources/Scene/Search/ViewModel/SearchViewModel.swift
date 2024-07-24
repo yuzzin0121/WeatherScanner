@@ -26,7 +26,8 @@ final class SearchViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        let cityListRelay = PublishRelay<[City]>()
+        let firstCityList = CityManager.shared.getCityList()
+        let cityListRelay = BehaviorRelay<[City]>(value: firstCityList)
         let searchText = PublishRelay<String>()
         let searchStringValid = BehaviorRelay(value: false)
         let searchResultEmpty = PublishRelay<Void>()

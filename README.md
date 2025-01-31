@@ -1,12 +1,11 @@
 # WeatherScanner
-> iOS 채용 사전 과제 - `Open Weather API`를 이용한 **날씨 앱**
+> `Open Weather API`를 이용한 **날씨 앱**
 <img src=https://github.com/user-attachments/assets/625b0e27-9d43-4775-a296-a844836f2cba width=650>
 
 ## 🛠️ 프로젝트 개발 및 환경
 - **개발 인원:** iOS 1인 개발
 - **개발 기간: 3일** (2024.07.22 ~ 2024.07.24)
 - **개발 환경:** 최소 버전 iOS 13.0 / 세로 모드 / 아이폰용
-> 귀사의 릴리즈된 앱 target Version에 맞추어 최소 버전 설정
 
 <br><br>
 
@@ -61,7 +60,7 @@ dataSource = RxCollectionViewSectionedReloadDataSource<SectionOfWeatherData>(con
 <img src=https://github.com/user-attachments/assets/f8bd89bc-033e-4aee-b4e7-06ee809b3a33 width=220>
 </details>
 <details>
-<summary><b>LocalizedError</b>protocol을 채택함으로써 <b>에러에 대한 이유를 설명</b>할 수 있는 APIError 구현 (열거형으로 오류 처리)</summary>
+<summary><b>LocalizedError</b> protocol을 채택함으로써 <b>에러에 대한 이유를 설명</b>할 수 있는 APIError 구현 (열거형으로 오류 처리)</summary>
   
 ```
 enum WeatherAPIError: Int, LocalizedError {
